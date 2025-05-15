@@ -1,0 +1,82 @@
+
+import { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
+
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <a href="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/b6171633-349a-4780-a66c-f52bea9b7b8e.png" 
+            alt="Henry Brothers Logo" 
+            className="h-16 w-auto"
+          />
+        </a>
+        
+        <div className="hidden lg:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
+            <a href="#services" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors">Services</a>
+            <a href="#about" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors">About</a>
+            <a href="#areas" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors">Service Areas</a>
+            <a href="#clean-check" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors">Clean and Check℠</a>
+            <a href="#contact" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors">Contact</a>
+          </nav>
+          
+          <Button className="btn-primary flex items-center space-x-2">
+            <Phone className="h-4 w-4" />
+            <span>Call Us Today</span>
+          </Button>
+        </div>
+        
+        <button 
+          className="lg:hidden text-henry-navy" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          </svg>
+        </button>
+      </div>
+      
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-200">
+          <div className="container mx-auto px-4 py-4">
+            <nav className="flex flex-col space-y-4">
+              <a href="#services" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+              <a href="#about" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>About</a>
+              <a href="#areas" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Service Areas</a>
+              <a href="#clean-check" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Clean and Check℠</a>
+              <a href="#contact" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+              
+              <Button className="btn-primary flex items-center space-x-2 justify-center mt-2">
+                <Phone className="h-4 w-4" />
+                <span>Call Us Today</span>
+              </Button>
+            </nav>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Header;

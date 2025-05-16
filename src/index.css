@@ -43,7 +43,7 @@
   }
 
   body {
-    @apply bg-white text-henry-navy font-sans;
+    @apply bg-vintage-cream text-henry-navy font-sans;
   }
 
   .clip-angle {
@@ -57,18 +57,105 @@
   .service-card:hover .icon-wrapper {
     @apply bg-henry-yellow text-henry-navy;
   }
+  
+  /* Vintage styling */
+  .vintage-border {
+    @apply border-4 border-henry-navy p-1;
+    box-shadow: 8px 8px 0 rgba(12, 35, 64, 0.7);
+  }
+  
+  .vintage-card {
+    @apply bg-vintage-cream border-2 border-henry-navy rounded-none p-6 transition-all;
+    box-shadow: 5px 5px 0 rgba(12, 35, 64, 0.7);
+  }
+  
+  .vintage-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230c2340' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  
+  .distressed {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .distressed::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.2 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  
+  .vintage-rays {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vintage-rays::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0, rgba(251, 216, 114, 0.1) 0%, transparent 70%);
+    z-index: 1;
+  }
+
+  .vintage-text-shadow {
+    text-shadow: 2px 2px 0 rgba(12, 35, 64, 0.3);
+  }
+
+  .retro-badge {
+    @apply bg-henry-yellow text-henry-navy font-bold uppercase px-4 py-1 inline-block;
+    position: relative;
+    transform: rotate(-2deg);
+  }
+  
+  .retro-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #0c2340;
+    transform: translate(3px, 3px);
+    z-index: -1;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-henry-yellow text-henry-navy font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition-all shadow-md;
+    @apply bg-henry-yellow text-henry-navy font-bold py-3 px-6 hover:bg-opacity-90 transition-all;
+    position: relative;
+    border: 2px solid #0c2340;
+    box-shadow: 4px 4px 0 #0c2340;
+    transform: translate(-2px, -2px);
+    transition: all 0.2s;
+  }
+  
+  .btn-primary:hover {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 0 #0c2340;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold font-heading mb-6 text-henry-navy;
+    @apply text-3xl md:text-4xl font-bold font-heading mb-6 text-henry-navy vintage-text-shadow;
   }
 
   .service-card {
-    @apply border border-gray-200 rounded-lg p-6 transition-all hover:shadow-lg hover:border-henry-yellow;
+    @apply vintage-card hover:transform hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .vintage-heading {
+    @apply font-heading font-bold text-henry-navy;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
+

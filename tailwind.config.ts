@@ -67,6 +67,14 @@ export default {
 				henry: {
 					navy: '#0c2340',
 					yellow: '#fbd872',
+				},
+				// Vintage theme colors
+				vintage: {
+					cream: '#f8f4e8',
+					paper: '#e8e0cc',
+					tan: '#d2b48c',
+					rust: '#a45a52',
+					dark: '#221F26',
 				}
 			},
 			borderRadius: {
@@ -109,3 +117,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

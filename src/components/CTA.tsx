@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-henry-navy to-[#183761]">
+    <section className="py-20 bg-henry-navy vintage-texture">
       <div className="container mx-auto px-4">
-        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 md:p-12 shadow-xl">
+        <div className="vintage-border bg-vintage-paper p-8 md:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold font-heading text-henry-navy mb-4 vintage-text-shadow">
                 Ready for Expert Ductless HVAC Service?
               </h2>
-              <p className="text-gray-200 text-lg mb-8">
+              <p className="text-vintage-dark text-lg mb-8">
                 Contact Henry Brothers today for a free consultation on your mini split or ductless heating and cooling needs. Serving Louisville, KY and Southern Indiana.
               </p>
               
@@ -19,14 +19,14 @@ const CTA = () => {
                 <Button className="btn-primary text-lg">
                   Get a Free Quote
                 </Button>
-                <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-henry-navy font-bold py-3 px-6 rounded-md transition-all text-lg">
+                <Button variant="outline" className="bg-transparent border-2 border-henry-navy text-henry-navy hover:bg-henry-navy hover:text-white font-bold py-3 px-6 transition-all text-lg">
                   Contact Us
                 </Button>
               </div>
             </div>
             
             <div className="lg:text-right">
-              <div className="inline-block bg-white p-6 rounded-lg shadow-lg text-left">
+              <div className="inline-block vintage-border bg-white p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-henry-navy rounded-full p-2 mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-henry-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -35,7 +35,7 @@ const CTA = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-henry-navy">Call Us Today</h3>
-                    <p className="text-gray-500">For immediate assistance</p>
+                    <p className="text-vintage-dark">For immediate assistance</p>
                   </div>
                 </div>
                 <a href="tel:+15025551234" className="text-2xl font-bold text-henry-navy hover:text-henry-yellow transition-colors">(502) 555-1234</a>
@@ -49,3 +49,4 @@ const CTA = () => {
 };
 
 export default CTA;
+

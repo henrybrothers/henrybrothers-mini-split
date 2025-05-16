@@ -21,11 +21,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-vintage-cream shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/b6171633-349a-4780-a66c-f52bea9b7b8e.png" 
+            src="/lovable-uploads/e46e0cbc-5684-4ea7-ba0d-12bf372f3765.png" 
             alt="Henry Brothers Logo" 
             className="h-16 w-auto"
           />
@@ -58,7 +58,7 @@ const Header = () => {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200">
+        <div className="lg:hidden bg-vintage-cream border-t border-gray-200">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               <a href="#services" className="text-henry-navy font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
@@ -80,3 +80,4 @@ const Header = () => {
 };
 
 export default Header;
+

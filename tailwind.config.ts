@@ -75,6 +75,9 @@ export default {
 					tan: '#d2b48c',
 					rust: '#a45a52',
 					dark: '#221F26',
+					sepia: '#704214',
+					parchment: '#f2e8c9',
+					aged: '#d8c8a0',
 				}
 			},
 			borderRadius: {
@@ -112,9 +115,9 @@ export default {
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
 				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+				'typewriter': ['"Courier New"', 'monospace'],
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

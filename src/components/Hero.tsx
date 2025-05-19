@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import HeroForm from "./HeroForm";
 
 const Hero = () => {
   return (
@@ -23,12 +24,16 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button className="btn-primary text-lg">
-                Get a Free Quote
-              </Button>
-              <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-henry-navy font-bold py-3 px-6 transition-all text-lg">
-                Learn About Our Services
-              </Button>
+              <a href="#contact">
+                <Button className="btn-primary text-lg">
+                  Get a Free Quote
+                </Button>
+              </a>
+              <a href="#services">
+                <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-henry-navy font-bold py-3 px-6 transition-all text-lg">
+                  Learn About Our Services
+                </Button>
+              </a>
             </div>
             
             <div className="flex items-center space-x-6">
@@ -52,37 +57,7 @@ const Hero = () => {
           </div>
           
           <div className="lg:col-span-5">
-            <div className="vintage-border bg-vintage-cream distressed">
-              <div className="p-6">
-                <div className="text-center mb-4">
-                  <img 
-                    src="/lovable-uploads/e46e0cbc-5684-4ea7-ba0d-12bf372f3765.png" 
-                    alt="Henry Brothers" 
-                    className="h-32 mx-auto mb-2"
-                  />
-                  <h3 className="text-2xl font-bold text-henry-navy mb-1">Schedule Your Service</h3>
-                  <p className="text-vintage-dark mb-6 text-sm">Expert ductless HVAC solutions for your home or business</p>
-                </div>
-                
-                <form className="space-y-4">
-                  <div>
-                    <input type="text" placeholder="Your Name" className="w-full px-4 py-2 border-2 border-henry-navy bg-vintage-cream focus:outline-none focus:ring-2 focus:ring-henry-yellow" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email Address" className="w-full px-4 py-2 border-2 border-henry-navy bg-vintage-cream focus:outline-none focus:ring-2 focus:ring-henry-yellow" />
-                  </div>
-                  <div>
-                    <input type="tel" placeholder="Phone Number" className="w-full px-4 py-2 border-2 border-henry-navy bg-vintage-cream focus:outline-none focus:ring-2 focus:ring-henry-yellow" />
-                  </div>
-                  <div>
-                    <textarea placeholder="Tell us about your needs" rows={2} className="w-full px-4 py-2 border-2 border-henry-navy bg-vintage-cream focus:outline-none focus:ring-2 focus:ring-henry-yellow"></textarea>
-                  </div>
-                  <Button className="btn-primary w-full text-lg">
-                    Request Service
-                  </Button>
-                </form>
-              </div>
-            </div>
+            <HeroForm />
           </div>
         </div>
       </div>
@@ -91,4 +66,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

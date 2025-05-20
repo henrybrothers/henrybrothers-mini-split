@@ -48,7 +48,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold mb-1">Email</h4>
                     <p className="text-gray-200">Send us an email anytime</p>
-                    <a href="mailto:info@thehenrybros.com" className="text-henry-yellow hover:underline block mt-1">info@thehenrybros.com</a>
+                    <a href="mailto:info@thehenrybros.com" className="text-henry-yellow hover:underline block mt-1">hello@thehenrybros.com</a>
                   </div>
                 </div>
                 
@@ -67,7 +67,7 @@ const Contact = () => {
                     <ul className="text-gray-200 space-y-1">
                       <li className="flex justify-between">
                         <span>Monday - Friday:</span>
-                        <span>8:00 AM - 6:00 PM</span>
+                        <span>9:00 AM - 6:00 PM</span>
                       </li>
                       <li className="flex justify-between">
                         <span>Saturday:</span>

@@ -7,16 +7,6 @@ const CleanCheck = () => {
     <section id="clean-check" className="py-20 bg-vintage-cream">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="vintage-border aspect-[9/16] max-w-sm mx-auto">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/Aom7_-Hn2NU"
-              title="YouTube Shorts player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
           <div>
             <div className="mb-4">
               <span className="retro-badge">Our Signature Service</span>
@@ -26,7 +16,16 @@ const CleanCheck = () => {
             <p className="text-vintage-dark text-lg mb-6">
               The Henry Brothers Clean and Check℠ is our exclusive maintenance service designed specifically for heating and air systems. Similar to a standard tune-ups offered by other companies, our comprehensive service ensures your system operates at peak efficiency year-round.
             </p>
-            
+            <div className="vintage-border aspect-[9/16] max-w-sm mx-auto">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Aom7_-Hn2NU"
+                title="YouTube Shorts player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
             <div className="vintage-card mb-8 border-henry-yellow">
               <div className="flex gap-4 items-center mb-4">
                 <div className="bg-henry-yellow rounded-full p-2 flex-shrink-0">

@@ -6,11 +6,6 @@ const HeroForm = () => {
     <div className="vintage-border bg-vintage-cream distressed">
       <div className="p-6">
         <div className="text-center mb-4">
-          <img 
-            src="/lovable-uploads/118bbfa7-3faf-421e-8fa2-60cefa7888fd.png" 
-            alt="Henry Brothers" 
-            className="h-32 mx-auto mb-2"
-          />
           <h3 className="text-2xl font-bold text-henry-navy mb-1">Schedule Your Service</h3>
           <p className="text-vintage-dark mb-6 text-sm">Expert ductless HVAC solutions for your home</p>
         </div>

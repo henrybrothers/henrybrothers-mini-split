@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/118bbfa7-3faf-421e-8fa2-60cefa7888fd.png" 
+            src="/lovable-uploads/henrybrothers-logo.png" 
             alt="Henry Brothers Logo" 
             className="h-16 w-auto"
           />

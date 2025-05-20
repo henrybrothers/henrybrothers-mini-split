@@ -54,7 +54,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-henry-yellow mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-gray-300">Mon-Fri: 8am-6pm, Sat: 9am-2pm</span>
+                <span className="text-gray-300">Mon-Fri: 9am-6pm, Sat: 9am-4pm</span>
               </li>
             </ul>
             
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400">
-          <p>&copy; {currentYear} Henry Brothers HVAC. All rights reserved.</p>
+          <p>&copy; {currentYear} Henry Brothers. All rights reserved.</p>
           <p className="mt-2 text-sm">
             "Clean and Check℠" is a service mark of Henry Brothers.
           </p>

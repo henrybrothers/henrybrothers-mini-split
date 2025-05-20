@@ -59,14 +59,14 @@ const About = () => {
             <div className="space-y-5">
               <div className="rounded-lg overflow-hidden shadow-lg transform translate-y-6">
                 <img 
-                  src="/lovable-uploads/justin.jpg&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/justin.jpg" 
                   alt="Justin Henry - HVAC professional/Co-owner" 
                   className="w-full h-64 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/nick.jpg&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/nick.jpg" 
                   alt="Nick Henry - Marketer/Co-owner" 
                   className="w-full h-48 object-cover"
                 />

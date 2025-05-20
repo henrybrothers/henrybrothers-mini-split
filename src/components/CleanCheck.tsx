@@ -48,15 +48,12 @@ const CleanCheck = () => {
               <h3 className="font-bold text-xl mb-4">What Our Clean and Check℠ Includes:</h3>
               <ul className="space-y-3">
                 {[
-                  "Deep cleaning of indoor and outdoor coils",
-                  "Thorough sanitization of system components",
+                  "Deep cleaning of outdoor coils",
                   "Complete system performance evaluation",
-                  "Filter replacement (as needed)",
-                  "Refrigerant level check and adjustment",
+                  "Standard filter replacement (as needed)",
+                  "Full performance check including refrigerant levels",
                   "Electrical connections inspection",
                   "Condensate drain cleaning",
-                  "Blower wheel cleaning",
-                  "System operation test and calibration"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-henry-yellow mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">

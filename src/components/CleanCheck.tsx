@@ -48,10 +48,11 @@ const CleanCheck = () => {
               <h3 className="font-bold text-xl mb-4">What Our Clean and Check℠ Includes:</h3>
               <ul className="space-y-3">
                 {[
+                  "New smart thermostat installed!",
                   "Deep cleaning of outdoor coils",
                   "Complete system performance evaluation",
                   "Standard filter replacement (as needed)",
-                  "Full performance check including refrigerant levels",
+                  "Refrigerant level check",
                   "Electrical connections inspection",
                   "Condensate drain cleaning",
                 ].map((item, i) => (

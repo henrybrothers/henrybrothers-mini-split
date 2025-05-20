@@ -68,7 +68,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/nick.jpg" 
                   alt="Nick Henry - Marketer/Co-owner" 
-                  className="w-full h-48 object-cover"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>

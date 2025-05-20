@@ -56,16 +56,6 @@ const CleanCheck = () => {
                 ))}
               </ul>
             </div>
-            <div className="vintage-border aspect-[9/16] max-w-sm mx-auto mb-8">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/Aom7_-Hn2NU"
-                title="YouTube Shorts player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
             
             <div className="vintage-border bg-henry-navy text-white p-6">
               <div className="flex justify-between items-center">
@@ -80,7 +70,16 @@ const CleanCheck = () => {
             </div>
           </div>
         </div>
-        
+        <div className="vintage-border aspect-[9/16] max-w-sm mx-auto mb-8">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Aom7_-Hn2NU"
+                title="YouTube Shorts player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
         <div className="mt-20">
           <div className="text-center mb-10">
             <h3 className="text-2xl font-bold font-heading vintage-heading">Why Regular Maintenance Matters</h3>

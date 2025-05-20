@@ -24,11 +24,6 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="#contact">
-                <Button className="btn-primary text-lg">
-                  Get a Free Quote
-                </Button>
-              </a>
               <a href="#services">
                 <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-henry-navy font-bold py-3 px-6 transition-all text-lg">
                   Learn About Our Services

@@ -10,18 +10,18 @@ const About = () => {
             
             <div className="space-y-6">
               <p className="text-gray-700 text-lg">
-                Henry Brothers is a family-owned and operated HVAC company founded by Justin and Nick Henry. With over 15 years of combined experience, we specialize in ductless and mini split heating and cooling solutions for homes and businesses across Louisville, Kentucky and Southern Indiana.
+                Henry Brothers is a family-owned and operated HVAC company founded by Justin and Nick Henry. We specialize in ductless and mini split heating and cooling solutions for homes across Louisville, Kentucky and Southern Indiana.
               </p>
               
               <p className="text-gray-700 text-lg">
-                Our mission is simple: to provide honest, reliable HVAC services with an emphasis on energy-efficient ductless solutions. We believe in building long-term relationships with our customers based on trust, quality workmanship, and exceptional service.
+                Our mission is simple: to provide transparent HVAC services with an emphasis on ductless solutions. We believe in building long-term relationships with our customers based on trust and openness.
               </p>
               
               <div className="border-l-4 border-henry-yellow pl-4 py-2 bg-gray-50">
                 <p className="text-lg italic text-gray-700">
-                  "We started Henry Brothers because we saw a need for specialized expertise in ductless HVAC systems. Our customers deserve the most energy-efficient, comfortable solutions available."
+                  "We started Henry Brothers because we saw a need for specialized expertise in ductless HVAC systems."
                 </p>
-                <p className="font-medium text-henry-navy mt-2">— Justin Henry, Co-founder</p>
+                <p className="font-medium text-henry-navy mt-2">— Justin Henry, Co-owner</p>
               </div>
             </div>
             
@@ -32,7 +32,7 @@ const About = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <span className="font-medium">Licensed & Insured</span>
+                <span className="font-medium">Insured</span>
               </div>
               
               <div className="flex items-center">

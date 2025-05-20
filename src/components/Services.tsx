@@ -29,7 +29,7 @@ const Services = () => {
           </div>
           <h2 className="section-title">Ductless HVAC Services</h2>
           <p className="text-vintage-dark max-w-2xl mx-auto">
-            Henry Brothers specializes in mini split and ductless HVAC solutions, providing expert installation, maintenance, and repair services for homes and businesses.
+            Henry Brothers specializes in mini split and ductless HVAC solutions, providing expert installation, maintenance, and repair services for homes.
           </p>
         </div>
         
@@ -78,7 +78,7 @@ const Services = () => {
             <div className="bg-vintage-cream p-6 vintage-border">
               <h4 className="vintage-heading text-xl mb-4">Get a Free Consultation</h4>
               <p className="text-vintage-dark mb-6">
-                Not sure if a ductless system is right for your space? Let our experts provide a personalized assessment and recommendation.
+                Not sure if a ductless system is right for your home? Let our experts provide a personalized assessment and recommendation.
               </p>
               <button className="btn-primary w-full">Schedule a Consultation</button>
             </div>

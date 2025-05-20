@@ -16,11 +16,11 @@ const Hero = () => {
               <span className="bg-henry-yellow text-henry-navy text-sm font-bold uppercase px-4 py-1 inline-block border-2 border-henry-navy">WE SERVE KY & IN</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white leading-tight mb-6 vintage-text-shadow">
-              Louisville's Ductless HVAC <span className="text-henry-yellow">Specialists</span>
+              Southern Indiana and Louisville's Ductless HVAC <span className="text-henry-yellow">Experts</span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-2xl">
               Mini split and ductless heating & cooling solutions from the Henry Brothers.
-              Expert installation, maintenance, and repair services for homes and businesses.
+              Expert installation, maintenance, and repair services for homes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

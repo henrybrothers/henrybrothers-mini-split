@@ -34,10 +34,10 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <Hero />
+      <CleanCheck />
       <Services />
       <About />
       <ServiceAreas />
-      <CleanCheck />
       <CTA />
       <Contact />
       <Footer />

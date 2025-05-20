@@ -66,9 +66,11 @@ const ServiceAreas = () => {
               <p className="text-gray-600">
                 Not sure if you're within our service area? Give us a call and we'll be happy to assist you!
               </p>
-              <button className="btn-primary mt-4">
-                Contact Us
-              </button>
+              <a href="tel:+18129941008">
+                <button className="btn-primary mt-4">
+                  Contact Us
+                </button>
+              </a>
             </div>
           </div>
           

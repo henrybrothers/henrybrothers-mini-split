@@ -12,7 +12,7 @@ const HeroForm = () => {
             className="h-32 mx-auto mb-2"
           />
           <h3 className="text-2xl font-bold text-henry-navy mb-1">Schedule Your Service</h3>
-          <p className="text-vintage-dark mb-6 text-sm">Expert ductless HVAC solutions for your home or business</p>
+          <p className="text-vintage-dark mb-6 text-sm">Expert ductless HVAC solutions for your home</p>
         </div>
         
         <iframe

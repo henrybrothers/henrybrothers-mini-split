@@ -7,14 +7,16 @@ const CleanCheck = () => {
     <section id="clean-check" className="py-20 bg-vintage-cream">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="vintage-border">
-            <img 
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-              alt="Clean and Check Service" 
-              className="w-full h-full object-cover"
-            />
+          <div className="vintage-border aspect-[9/16] max-w-sm mx-auto">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/Aom7_-Hn2NU"
+              title="YouTube Shorts player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
-          
           <div>
             <div className="mb-4">
               <span className="retro-badge">Our Signature Service</span>

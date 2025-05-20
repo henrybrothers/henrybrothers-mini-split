@@ -61,14 +61,14 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/justin.jpg" 
                   alt="Justin Henry - HVAC professional/Co-owner" 
-                  className="w-full h-64 object-cover"
+                  className="w-full h-96 object-cover object-top"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src="/lovable-uploads/nick.jpg" 
                   alt="Nick Henry - Marketer/Co-owner" 
-                  className="w-full h-64 object-cover"
+                  className="w-full h-96 object-cover object-top"
                 />
               </div>
             </div>

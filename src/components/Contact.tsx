@@ -1,4 +1,3 @@
-
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
@@ -48,7 +47,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold mb-1">Email</h4>
                     <p className="text-gray-200">Send us an email anytime</p>
-                    <a href="mailto:info@thehenrybros.com" className="text-henry-yellow hover:underline block mt-1">hello@thehenrybros.com</a>
+                    <a href="mailto:hello@thehenrybros.com" className="text-henry-yellow hover:underline block mt-1">hello@thehenrybros.com</a>
                   </div>
                 </div>
                 

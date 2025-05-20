@@ -17,10 +17,10 @@ const CTA = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="btn-primary text-lg">
-                  Get a Free Quote
+                <a href="#contact">Get a free quote</a>
                 </Button>
                 <Button variant="outline" className="bg-transparent border-2 border-henry-navy text-henry-navy hover:bg-henry-navy hover:text-white font-bold py-3 px-6 transition-all text-lg">
-                  Contact Us
+                  <a href="#contact">Contact Us</a>
                 </Button>
               </div>
             </div>
@@ -38,7 +38,7 @@ const CTA = () => {
                     <p className="text-vintage-dark">For immediate assistance</p>
                   </div>
                 </div>
-                <a href="tel:+15025551234" className="text-2xl font-bold text-henry-navy hover:text-henry-yellow transition-colors">(502) 555-1234</a>
+                <a href="tel:+18129941008" className="text-2xl font-bold text-henry-navy hover:text-henry-yellow transition-colors">(812) 994-1008</a>
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ const CleanCheck = () => {
             <h2 className="section-title">Clean and Check℠</h2>
             
             <p className="text-vintage-dark text-lg mb-6">
-              The Henry Brothers Clean and Check℠ is our exclusive maintenance service designed specifically for ductless and mini split systems. Unlike standard tune-ups offered by other companies, our comprehensive service ensures your system operates at peak efficiency year-round.
+              The Henry Brothers Clean and Check℠ is our exclusive maintenance service designed specifically for heating and air systems. Similar to a standard tune-ups offered by other companies, our comprehensive service ensures your system operates at peak efficiency year-round.
             </p>
             
             <div className="vintage-card mb-8 border-henry-yellow">
@@ -75,7 +75,7 @@ const CleanCheck = () => {
                   <p className="text-gray-200">Protect your investment and ensure peak performance</p>
                 </div>
                 <Button className="btn-primary whitespace-nowrap">
-                  Book Now
+                <a href="tel:+18129941008"><span>Call Us</span></a>
                 </Button>
               </div>
             </div>

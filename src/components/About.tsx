@@ -59,32 +59,16 @@ const About = () => {
             <div className="space-y-5">
               <div className="rounded-lg overflow-hidden shadow-lg transform translate-y-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="HVAC Professional" 
+                  src="/lovable-uploads/justin.jpg&auto=format&fit=crop&w=800&q=80" 
+                  alt="Justin Henry - HVAC professional/Co-owner" 
                   className="w-full h-64 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1581094282565-710cf5e7bdad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="HVAC Installation" 
+                  src="/lovable-uploads/nick.jpg&auto=format&fit=crop&w=800&q=80" 
+                  alt="Nick Henry - Marketer/Co-owner" 
                   className="w-full h-48 object-cover"
-                />
-              </div>
-            </div>
-            <div className="space-y-5">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Mini Split System" 
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg transform translate-y-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Ductless AC Unit" 
-                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>

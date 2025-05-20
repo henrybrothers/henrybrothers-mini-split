@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <img 
-              src="/lovable-uploads/b6171633-349a-4780-a66c-f52bea9b7b8e.png" 
+              src="/lovable-uploads/118bbfa7-3faf-421e-8fa2-60cefa7888fd.png" 
               alt="Henry Brothers Logo" 
               className="h-16 w-auto mb-4"
             />
@@ -47,7 +47,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-henry-yellow mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+15025551234" className="text-gray-300 hover:text-henry-yellow">(502) 555-1234</a>
+                <a href="tel:+18129941008" className="text-gray-300 hover:text-henry-yellow">(812) 994-1008</a>
               </li>
               <li className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-henry-yellow mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

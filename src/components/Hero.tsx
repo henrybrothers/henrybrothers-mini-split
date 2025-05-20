@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7">
             <div className="mb-4 transform -rotate-2">
-              <span className="bg-henry-yellow text-henry-navy text-sm font-bold uppercase px-4 py-1 inline-block border-2 border-henry-navy">Since 2018</span>
+              <span className="bg-henry-yellow text-henry-navy text-sm font-bold uppercase px-4 py-1 inline-block border-2 border-henry-navy">WE SERVE KY & IN</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white leading-tight mb-6 vintage-text-shadow">
               Louisville's Ductless HVAC <span className="text-henry-yellow">Specialists</span>

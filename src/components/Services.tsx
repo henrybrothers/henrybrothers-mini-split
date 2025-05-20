@@ -1,5 +1,5 @@
 
-import { Fan, AirVent, Thermometer, Wrench } from "lucide-react";
+import { AirVent, Thermometer, Wrench } from "lucide-react";
 
 const services = [
   {
@@ -17,11 +17,6 @@ const services = [
     description: "Our exclusive maintenance service that ensures your system operates at peak efficiency year-round.",
     icon: Thermometer,
   },
-  {
-    title: "Air Purification",
-    description: "Improve your indoor air quality with our specialized filtration and purification solutions.",
-    icon: Fan,
-  }
 ];
 
 const Services = () => {
@@ -38,7 +33,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="service-card">
               <div className="icon-wrapper bg-henry-navy text-henry-yellow p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 transition-colors border-2 border-henry-yellow">
@@ -89,19 +84,9 @@ const Services = () => {
             </div>
           </div>
         </div>
-        
-        <div className="mt-16 text-center">
-          <img 
-            src="/lovable-uploads/62681387-cf05-4dd3-b835-9c9befdd1e9f.png" 
-            alt="Vintage Air Conditioning Sign" 
-            className="h-64 mx-auto mb-8"
-          />
-          <p className="italic text-vintage-dark">"The Henry Brothers - bringing vintage quality with modern efficiency"</p>
-        </div>
       </div>
     </section>
   );
 };
 
 export default Services;
-

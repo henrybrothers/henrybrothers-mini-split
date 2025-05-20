@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/e46e0cbc-5684-4ea7-ba0d-12bf372f3765.png" 
+            src="/lovable-uploads/118bbfa7-3faf-421e-8fa2-60cefa7888fd.png" 
             alt="Henry Brothers Logo" 
             className="h-16 w-auto"
           />
@@ -42,7 +42,7 @@ const Header = () => {
           
           <Button className="btn-primary flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>Call Us Today</span>
+            <a href="tel:+18129941008"><span>Call Us Today</span></a>
           </Button>
         </div>
         
@@ -69,7 +69,7 @@ const Header = () => {
               
               <Button className="btn-primary flex items-center space-x-2 justify-center mt-2">
                 <Phone className="h-4 w-4" />
-                <span>Call Us Today</span>
+                <a href="tel:+18129941008"><span>Call Us Today</span></a>
               </Button>
             </nav>
           </div>
@@ -80,4 +80,3 @@ const Header = () => {
 };
 
 export default Header;
-

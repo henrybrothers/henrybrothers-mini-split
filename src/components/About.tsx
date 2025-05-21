@@ -55,22 +55,20 @@ const About = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 gap-5">
-            <div className="space-y-5">
-              <div className="rounded-lg overflow-hidden shadow-lg transform translate-y-6">
-                <img 
-                  src="/lovable-uploads/justin.jpg" 
-                  alt="Justin Henry - HVAC professional/Co-owner" 
-                  className="w-full h-96 object-cover object-top"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/nick.jpg" 
-                  alt="Nick Henry - Marketer/Co-owner" 
-                  className="w-full h-96 object-cover object-top"
-                />
-              </div>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <div className="vintage-border bg-vintage-cream w-full sm:w-1/2 max-w-[300px] mx-auto">
+              <img 
+                src="/lovable-uploads/justin.jpg" 
+                alt="Justin Henry - HVAC professional/Co-owner" 
+                className="w-full h-auto object-cover object-top shadow-md"
+              />
+            </div>
+            <div className="vintage-border bg-vintage-cream w-full sm:w-1/2 max-w-[300px] mx-auto">
+              <img 
+                src="/lovable-uploads/nick.jpg" 
+                alt="Nick Henry - Marketer/Co-owner" 
+                className="w-full h-auto object-cover object-top shadow-md"
+              />
             </div>
           </div>
         </div>

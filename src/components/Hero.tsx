@@ -29,6 +29,11 @@ const Hero = () => {
                   Learn About Our Services
                 </Button>
               </a>
+              <a href="#financing">
+                <Button className="bg-henry-yellow text-henry-navy border-2 border-henry-navy hover:bg-white hover:text-henry-navy font-bold py-3 px-6 transition-all text-lg">
+                  Financing Options
+                </Button>
+              </a>
             </div>
             
             <div className="flex items-center space-x-6">

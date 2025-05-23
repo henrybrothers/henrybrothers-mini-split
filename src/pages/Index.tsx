@@ -8,6 +8,7 @@ import CleanCheck from "@/components/CleanCheck";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Financing from "@/components/Financing";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -38,6 +39,7 @@ const Index = () => {
       <Services />
       <About />
       <ServiceAreas />
+      <Financing />
       <CTA />
       <Contact />
       <Footer />

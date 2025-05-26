@@ -34,7 +34,7 @@ const ScheduleCleanAndCheck = () => {
 
   return (
     <iframe
-      data-tally-src="https://tally.so/r/m659Bk?transparentBackground=1"
+      data-tally-src="https://tally.so/r/m659Bk"
       width="100%"
       height="100%"
       frameBorder="0"

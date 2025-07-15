@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 
 const CTA = () => {
   return (
@@ -29,16 +30,14 @@ const CTA = () => {
               <div className="inline-block vintage-border bg-white p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-henry-navy rounded-full p-2 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-henry-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
+                    <Calendar className="h-6 w-6 text-henry-yellow" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-henry-navy">Call Us Today</h3>
-                    <p className="text-vintage-dark">For immediate assistance</p>
+                    <h3 className="font-bold text-xl text-henry-navy">Schedule Now</h3>
+                    <p className="text-vintage-dark">Book your service online</p>
                   </div>
                 </div>
-                <a href="tel:+18129941008" className="text-2xl font-bold text-henry-navy hover:text-henry-yellow transition-colors">(812) 994-1008</a>
+                <a href="/schedule" className="text-2xl font-bold text-henry-navy hover:text-henry-yellow transition-colors">Schedule Service</a>
               </div>
             </div>
           </div>
@@ -49,4 +48,3 @@ const CTA = () => {
 };
 
 export default CTA;
-

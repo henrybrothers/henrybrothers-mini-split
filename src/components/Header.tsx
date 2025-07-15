@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,8 +40,8 @@ const Header = () => {
           </nav>
           
           <Button className="btn-primary flex items-center space-x-2">
-            <Phone className="h-4 w-4" />
-            <a href="tel:+18129941008"><span>Call Us Today</span></a>
+            <Calendar className="h-4 w-4" />
+            <a href="/schedule"><span>Schedule Now</span></a>
           </Button>
         </div>
         
@@ -68,8 +67,8 @@ const Header = () => {
               <a href="#contact" className="text-white font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
               
               <Button className="btn-primary flex items-center space-x-2 justify-center mt-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+18129941008"><span>Call Us Today</span></a>
+                <Calendar className="h-4 w-4" />
+                <a href="/schedule"><span>Schedule Now</span></a>
               </Button>
             </nav>
           </div>

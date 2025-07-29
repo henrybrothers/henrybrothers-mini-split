@@ -9,6 +9,8 @@ import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Financing from "@/components/Financing";
+import JsonLdSchema from "@/components/JsonLdSchema";
+import { localBusinessSchema, organizationSchema, breadcrumbSchema, webSiteSchema } from "@/utils/schemaData";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -33,6 +35,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLdSchema schemaData={localBusinessSchema} />
+      <JsonLdSchema schemaData={organizationSchema} />
+      <JsonLdSchema schemaData={breadcrumbSchema} />
+      <JsonLdSchema schemaData={webSiteSchema} />
+      
       <Header />
       <Hero />
       <CleanCheck />

@@ -10,7 +10,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Financing from "@/components/Financing";
 import JsonLdSchema from "@/components/JsonLdSchema";
-import { localBusinessSchema, organizationSchema, breadcrumbSchema, webSiteSchema } from "@/utils/schemaData";
+import { localBusinessSchema, organizationSchema, breadcrumbSchema, webSiteSchema, reviewsSchema } from "@/utils/schemaData";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -39,6 +39,9 @@ const Index = () => {
       <JsonLdSchema schemaData={organizationSchema} />
       <JsonLdSchema schemaData={breadcrumbSchema} />
       <JsonLdSchema schemaData={webSiteSchema} />
+      {reviewsSchema.map((review, index) => (
+        <JsonLdSchema key={index} schemaData={review} />
+      ))}
       
       <Header />
       <Hero />

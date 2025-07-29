@@ -59,6 +59,13 @@ export const localBusinessSchema = {
   "priceRange": "$$",
   "paymentAccepted": "Cash, Credit Card, Check, Financing Available",
   "currenciesAccepted": "USD",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "2",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "HVAC Services",
@@ -121,6 +128,13 @@ export const organizationSchema = {
     "addressRegion": "KY",
     "addressCountry": "US"
   },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "2",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "sameAs": [
     "https://www.facebook.com/thehenrybros/"
   ],
@@ -135,6 +149,49 @@ export const organizationSchema = {
     }
   ]
 };
+
+export const reviewsSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "Timmy Mowen"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "super professional and informative on how it all works. reasonably priced. 5/5 would recommend.",
+    "datePublished": "2025-01-13",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "@id": "https://thehenrybros.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "Kerrie Fullen"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "Just wanted to say how much we appreciated Justin and his quickness in addressing our issues. He changed out some parts and got us back up and running quickly.",
+    "datePublished": "2025-01-26",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "@id": "https://thehenrybros.com"
+    }
+  }
+];
 
 export const breadcrumbSchema = {
   "@context": "https://schema.org",

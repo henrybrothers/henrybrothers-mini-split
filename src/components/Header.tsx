@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#182845] shadow-md py-2' : 'bg-[#182845] py-4'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-henry-navy shadow-md py-2' : 'bg-henry-navy py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img 
@@ -57,7 +57,7 @@ const Header = () => {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#182845] border-t border-gray-700">
+        <div className="lg:hidden bg-henry-navy border-t border-gray-700">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               <a href="#services" className="text-white font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Services</a>

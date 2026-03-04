@@ -19,6 +19,7 @@ const HeroForm = () => {
           marginHeight={0}
           marginWidth={0}
           style={{ border: "none" }}
+          loading="lazy"
         ></iframe>
       </div>
     </div>

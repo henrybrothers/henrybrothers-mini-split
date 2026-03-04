@@ -27,6 +27,8 @@ const Header = () => {
             src="/images/Website_Header_Logo.png" 
             alt="Henry Brothers Logo" 
             className="h-16 w-auto"
+            width={504}
+            height={302}
           />
         </a>
         

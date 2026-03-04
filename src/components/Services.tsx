@@ -80,7 +80,7 @@ const Services = () => {
               <p className="text-vintage-dark mb-6">
                 Not sure if a ductless system is right for your home? Let our experts provide a personalized assessment and recommendation.
               </p>
-              <button className="btn-primary w-full"><a href="#contact"></a>Schedule a Consultation</button>
+              <a href="#contact" className="btn-primary w-full inline-block text-center">Schedule a Consultation</a>
             </div>
           </div>
         </div>

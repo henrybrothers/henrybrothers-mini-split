@@ -39,9 +39,11 @@ const Header = () => {
             <a href="#contact" className="text-white font-medium hover:text-henry-yellow transition-colors">Contact</a>
           </nav>
           
-          <Button className="btn-primary flex items-center space-x-2">
-            <Calendar className="h-4 w-4" />
-            <a href="/schedule"><span>Schedule Now</span></a>
+          <Button className="btn-primary flex items-center space-x-2" asChild>
+            <a href="/schedule">
+              <Calendar className="h-4 w-4" />
+              <span>Schedule Now</span>
+            </a>
           </Button>
         </div>
         
@@ -67,9 +69,11 @@ const Header = () => {
               <a href="#clean-check" className="text-white font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Clean and Check℠</a>
               <a href="#contact" className="text-white font-medium hover:text-henry-yellow transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
               
-              <Button className="btn-primary flex items-center space-x-2 justify-center mt-2">
-                <Calendar className="h-4 w-4" />
-                <a href="/schedule"><span>Schedule Now</span></a>
+              <Button className="btn-primary flex items-center space-x-2 justify-center mt-2" asChild>
+                <a href="/schedule">
+                  <Calendar className="h-4 w-4" />
+                  <span>Schedule Now</span>
+                </a>
               </Button>
             </nav>
           </div>

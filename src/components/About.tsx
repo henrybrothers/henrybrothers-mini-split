@@ -61,6 +61,9 @@ const About = () => {
                 src="/lovable-uploads/justin.jpg" 
                 alt="Justin Henry - HVAC professional/Co-owner" 
                 className="w-full h-auto object-cover object-top shadow-md"
+                width={1536}
+                height={2048}
+                loading="lazy"
               />
             </div>
             <div className="vintage-border bg-vintage-cream w-full sm:w-1/2 max-w-[300px] mx-auto">
@@ -68,6 +71,9 @@ const About = () => {
                 src="/lovable-uploads/nick.jpg" 
                 alt="Nick Henry - Marketer/Co-owner" 
                 className="w-full h-auto object-cover object-top shadow-md"
+                width={2268}
+                height={4032}
+                loading="lazy"
               />
             </div>
           </div>

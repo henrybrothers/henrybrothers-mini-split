@@ -11,6 +11,9 @@ const Footer = () => {
               src="/images/Website_Header_Logo.png" 
               alt="Henry Brothers Logo" 
               className="h-16 w-auto mb-4"
+              width={504}
+              height={302}
+              loading="lazy"
             />
             <p className="text-gray-300 mb-4">
               Expert ductless and mini split HVAC solutions for residential properties in Louisville, KY and Southern Indiana.

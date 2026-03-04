@@ -17,10 +17,10 @@ const CTA = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="btn-primary text-lg">
-                <a href="#contact">Get a free quote</a>
+                <Button className="btn-primary text-lg" asChild>
+                  <a href="#contact">Get a free quote</a>
                 </Button>
-                <Button variant="outline" className="bg-transparent border-2 border-henry-navy text-henry-navy hover:bg-henry-navy hover:text-white font-bold py-3 px-6 transition-all text-lg">
+                <Button variant="outline" className="bg-transparent border-2 border-henry-navy text-henry-navy hover:bg-henry-navy hover:text-white font-bold py-3 px-6 transition-all text-lg" asChild>
                   <a href="#contact">Contact Us</a>
                 </Button>
               </div>

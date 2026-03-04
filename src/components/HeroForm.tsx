@@ -6,7 +6,7 @@ const HeroForm = () => {
     <div className="vintage-border bg-vintage-cream distressed">
       <div className="p-6">
         <div className="text-center mb-4">
-          <h3 className="text-2xl font-bold text-henry-navy mb-1">Schedule Your Service</h3>
+          <h2 className="text-2xl font-bold text-henry-navy mb-1">Schedule Your Service</h2>
           <p className="text-vintage-dark mb-6 text-sm">Expert ductless HVAC solutions for your home</p>
         </div>
         

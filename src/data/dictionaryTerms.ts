@@ -51,6 +51,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'An inverter compressor adjusts its speed to match what your room actually needs, instead of just slamming on at full blast and shutting off over and over. Think of it like cruise control versus stomping the gas and brake. This means steadier temperatures, quieter operation, and lower energy bills. Most modern <a href="/dictionary/mini-split">mini splits</a> use inverter technology, which is a big part of why they score so well on <a href="/dictionary/seer-rating">SEER ratings</a>. It\'s one of those things you don\'t think about, but you definitely notice the difference.',
     category: "Efficiency",
     relatedSlugs: ["mini-split", "seer-rating", "heat-pump"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "mini-split",

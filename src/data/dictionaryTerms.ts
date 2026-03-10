@@ -42,6 +42,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'The indoor air handler is the unit mounted on your wall inside the room. It\'s the part of the <a href="/dictionary/mini-split">mini split</a> you actually see and feel — it blows conditioned air into the space and pulls room air back in to be cooled or heated. Most are slim, quiet, and come with a remote control. Each room gets its own air handler, which is what makes <a href="/dictionary/zone-cooling">zone cooling</a> possible. They connect to the <a href="/dictionary/outdoor-condenser-unit">outdoor unit</a> through a small set of <a href="/dictionary/refrigerant-line-set">refrigerant lines</a> that run through a small hole in the wall.',
     category: "Parts & Components",
     relatedSlugs: ["mini-split", "outdoor-condenser-unit", "refrigerant-line-set", "zone-cooling"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "inverter-compressor",

@@ -24,6 +24,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'Ductless HVAC is exactly what it sounds like — a heating and cooling system that doesn\'t need ductwork. Instead of pushing air through a maze of metal ducts in your walls and ceiling, a <a href="/dictionary/mini-split">mini split</a> delivers conditioned air directly into the room from a wall-mounted <a href="/dictionary/indoor-air-handler">air handler</a>. This makes it a great fit for older homes that were never built with duct systems, finished basements, sunrooms, and garage workshops. No ducts also means no duct leaks — which is where traditional systems lose a surprising amount of energy.',
     category: "Installation",
     relatedSlugs: ["mini-split", "mini-split-installation", "indoor-air-handler"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "heat-pump",

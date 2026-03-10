@@ -9,7 +9,7 @@ const data = {
   "description": "Expert ductless and mini split HVAC solutions for residential properties in Louisville, KY and Southern Indiana. Specializing in installation, maintenance, and repair services.",
   "url": "https://thehenrybros.com",
   "telephone": "+18129941008",
-  "email": "hello@thehenrybros.com",
+  "email": "team@thehenrybros.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Louisville",

@@ -1,5 +1,5 @@
-import { useParams, Link, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
+import { useEffect, useCallback } from "react";
 import DictionaryTermCard from "@/components/DictionaryTermCard";
 import {
   BreadcrumbSchema,

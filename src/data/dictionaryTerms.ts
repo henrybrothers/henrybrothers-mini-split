@@ -78,6 +78,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'Keeping a <a href="/dictionary/mini-split">mini split</a> running well doesn\'t take much, but it does take consistency. The basics include cleaning or replacing the filters in your <a href="/dictionary/indoor-air-handler">indoor air handler</a> every few weeks and keeping the <a href="/dictionary/outdoor-condenser-unit">outdoor unit</a> clear of leaves, dirt, and debris. Beyond that, an annual professional tune-up — like a <a href="/#clean-check">Clean and Check℠</a> — catches small issues before they turn into expensive repairs. Things like refrigerant levels, electrical connections, and coil condition all get looked at. A well-maintained mini split lasts longer and keeps your energy bills where they should be.',
     category: "Maintenance",
     relatedSlugs: ["mini-split", "indoor-air-handler", "outdoor-condenser-unit", "refrigerant-line-set"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "outdoor-condenser-unit",

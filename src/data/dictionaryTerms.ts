@@ -105,6 +105,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'SEER stands for Seasonal Energy Efficiency Ratio, and it tells you how efficiently a cooling system uses electricity over a typical cooling season. A higher number means lower energy bills. Most older window units or central air systems land around 10-14 SEER. Modern <a href="/dictionary/mini-split">mini splits</a> often hit 20 SEER or higher, especially ones with <a href="/dictionary/inverter-compressor">inverter compressors</a>. It\'s not the only thing that matters when choosing a system, but it gives you a solid apples-to-apples comparison of operating costs. Think of it like MPG for your car — the higher the number, the further your dollar goes.',
     category: "Efficiency",
     relatedSlugs: ["mini-split", "inverter-compressor", "btu"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "zone-cooling",

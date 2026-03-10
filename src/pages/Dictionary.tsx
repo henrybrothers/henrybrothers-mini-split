@@ -1,7 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import DictionarySearch from "@/components/DictionarySearch";
 import DictionaryTermCard from "@/components/DictionaryTermCard";
 import {
@@ -34,16 +32,19 @@ const Dictionary = () => {
       terms = terms.filter(
         (t) =>
           t.title.toLowerCase().includes(q) ||
-          t.description.toLowerCase().includes(q)
+          t.description.replace(/<[^>]*>/g, "").toLowerCase().includes(q)
       );
     }
     return terms.sort((a, b) => a.title.localeCompare(b.title));
   }, [search, activeCategory]);
 
-  const sortedTerms = [...dictionaryTerms].sort((a, b) => a.title.localeCompare(b.title));
+  const sortedTerms = useMemo(
+    () => [...dictionaryTerms].sort((a, b) => a.title.localeCompare(b.title)),
+    []
+  );
 
   return (
-    <div className="min-h-screen flex flex-col bg-vintage-cream">
+    <>
       <BreadcrumbSchema items={[
         { name: "Home", url: "https://thehenrybros.com" },
         { name: "Dictionary", url: "https://thehenrybros.com/dictionary" },
@@ -58,8 +59,6 @@ const Dictionary = () => {
         description="HVAC terms explained the way your neighbor would — no jargon, no fluff. A plain-spoken glossary from Henry Brothers."
         url="https://thehenrybros.com/dictionary"
       />
-
-      <Header />
 
       <main className="flex-1 pt-28 pb-16">
         <div className="container mx-auto px-4">
@@ -127,9 +126,7 @@ const Dictionary = () => {
           )}
         </div>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -87,6 +87,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'The outdoor condenser unit is the box that sits outside your home — it\'s the other half of your <a href="/dictionary/mini-split">mini split system</a>. It houses the <a href="/dictionary/inverter-compressor">compressor</a> and a big coil that either releases heat (in cooling mode) or absorbs it (in heating mode). It connects to your <a href="/dictionary/indoor-air-handler">indoor air handler</a> through <a href="/dictionary/refrigerant-line-set">refrigerant lines</a>. One outdoor unit can sometimes serve multiple indoor units, which is useful if you want to control several rooms. It needs decent airflow around it, so keeping bushes trimmed back and debris cleared is part of basic <a href="/dictionary/mini-split-maintenance">maintenance</a>.',
     category: "Parts & Components",
     relatedSlugs: ["mini-split", "indoor-air-handler", "inverter-compressor", "refrigerant-line-set"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "refrigerant-line-set",

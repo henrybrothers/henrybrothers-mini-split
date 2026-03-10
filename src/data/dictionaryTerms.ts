@@ -15,6 +15,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       "A BTU is just a way to measure heating and cooling power. The higher the BTU number, the more air a system can heat or cool. When someone says a mini split is 12,000 BTUs, that means it can comfortably handle a typical bedroom or garage. Getting the right BTU size for your space matters — too small and it runs constantly, too big and it cycles on and off without properly controlling humidity. A quick square-footage calculation usually points you in the right direction, but ceiling height, insulation, and how many windows you have all play a role too.",
     category: "Efficiency",
     relatedSlugs: ["mini-split", "zone-cooling", "indoor-air-handler"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "ductless-hvac",

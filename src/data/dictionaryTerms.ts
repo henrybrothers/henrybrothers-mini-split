@@ -96,6 +96,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'The refrigerant line set is the pair of copper tubes that connect your <a href="/dictionary/indoor-air-handler">indoor air handler</a> to the <a href="/dictionary/outdoor-condenser-unit">outdoor condenser unit</a>. One line carries cold refrigerant to the indoor unit, and the other carries warm refrigerant back outside. They run through a small hole drilled through your exterior wall — usually around three inches — and are insulated to keep them working efficiently. The length and routing of the line set can vary depending on where you want the indoor and outdoor units placed. During <a href="/dictionary/mini-split-installation">installation</a>, getting this part right matters for long-term performance.',
     category: "Parts & Components",
     relatedSlugs: ["indoor-air-handler", "outdoor-condenser-unit", "mini-split-installation"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "seer-rating",

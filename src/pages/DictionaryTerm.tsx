@@ -1,5 +1,5 @@
-import { useParams, Link, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
+import { useEffect, useCallback } from "react";
 import DictionaryTermCard from "@/components/DictionaryTermCard";
 import {
   BreadcrumbSchema,
@@ -10,8 +10,20 @@ import {
 import { getTermBySlug, getRelatedTerms } from "@/data/dictionaryTerms";
 
 const DictionaryTerm = () => {
+  const navigate = useNavigate();
   const { slug } = useParams<{ slug: string }>();
   const term = slug ? getTermBySlug(slug) : undefined;
+
+  const handleDescriptionClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const href = target.getAttribute('href');
+      if (href && href.startsWith('/dictionary/')) {
+        e.preventDefault();
+        navigate(href);
+      }
+    }
+  }, [navigate]);
 
   useEffect(() => {
     if (term) {
@@ -79,6 +91,7 @@ const DictionaryTerm = () => {
           <div
             className="vintage-card prose prose-henry max-w-none text-henry-navy/90 leading-relaxed text-base md:text-lg [&_a]:text-henry-navy [&_a]:font-semibold [&_a]:underline [&_a]:decoration-henry-yellow [&_a]:decoration-2 [&_a]:underline-offset-2 hover:[&_a]:text-henry-yellow hover:[&_a]:decoration-henry-navy [&_a]:transition-colors"
             dangerouslySetInnerHTML={{ __html: term.description }}
+            onClick={handleDescriptionClick}
           />
 
           {/* Related Terms */}

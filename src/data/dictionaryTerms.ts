@@ -33,6 +33,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'A heat pump moves heat from one place to another instead of generating it from scratch. In the summer, it pulls heat out of your room and dumps it outside. In the winter, it does the reverse — pulling heat from the outdoor air (yes, even when it\'s cold) and moving it inside. Every <a href="/dictionary/mini-split">mini split</a> is a heat pump, which means one system handles both heating and cooling. Modern <a href="/dictionary/inverter-compressor">inverter compressors</a> make them efficient enough to handle Southern Indiana winters without breaking a sweat.',
     category: "Parts & Components",
     relatedSlugs: ["mini-split", "inverter-compressor", "outdoor-condenser-unit"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "indoor-air-handler",

@@ -14,6 +14,17 @@ const DictionaryTerm = () => {
   const { slug } = useParams<{ slug: string }>();
   const term = slug ? getTermBySlug(slug) : undefined;
 
+  const handleDescriptionClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const href = target.getAttribute('href');
+      if (href && href.startsWith('/dictionary/')) {
+        e.preventDefault();
+        navigate(href);
+      }
+    }
+  }, [navigate]);
+
   useEffect(() => {
     if (term) {
       const plain = term.description.replace(/<[^>]*>/g, "");
@@ -26,17 +37,6 @@ const DictionaryTerm = () => {
   }, [term]);
 
   if (!term) return <Navigate to="/dictionary" replace />;
-
-  const handleDescriptionClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLElement;
-    if (target.tagName === 'A') {
-      const href = target.getAttribute('href');
-      if (href && href.startsWith('/dictionary/')) {
-        e.preventDefault();
-        navigate(href);
-      }
-    }
-  }, [navigate]);
 
   const related = getRelatedTerms(term);
   const plainDescription = term.description.replace(/<[^>]*>/g, "");

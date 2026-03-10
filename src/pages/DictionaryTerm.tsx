@@ -80,6 +80,7 @@ const DictionaryTerm = () => {
           <div
             className="vintage-card prose prose-henry max-w-none text-henry-navy/90 leading-relaxed text-base md:text-lg [&_a]:text-henry-navy [&_a]:font-semibold [&_a]:underline [&_a]:decoration-henry-yellow [&_a]:decoration-2 [&_a]:underline-offset-2 hover:[&_a]:text-henry-yellow hover:[&_a]:decoration-henry-navy [&_a]:transition-colors"
             dangerouslySetInnerHTML={{ __html: term.description }}
+            onClick={handleDescriptionClick}
           />
 
           {/* Related Terms */}

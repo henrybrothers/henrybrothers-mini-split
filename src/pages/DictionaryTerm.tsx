@@ -1,7 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useEffect } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import DictionaryTermCard from "@/components/DictionaryTermCard";
 import {
   BreadcrumbSchema,
@@ -33,7 +31,7 @@ const DictionaryTerm = () => {
   const termUrl = `https://thehenrybros.com/dictionary/${term.slug}`;
 
   return (
-    <div className="min-h-screen flex flex-col bg-vintage-cream">
+    <>
       <BreadcrumbSchema items={[
         { name: "Home", url: "https://thehenrybros.com" },
         { name: "Dictionary", url: "https://thehenrybros.com/dictionary" },
@@ -56,8 +54,6 @@ const DictionaryTerm = () => {
         url={termUrl}
         datePublished={term.datePublished}
       />
-
-      <Header />
 
       <main className="flex-1 pt-28 pb-16">
         <div className="container mx-auto px-4 max-w-3xl">
@@ -111,9 +107,7 @@ const DictionaryTerm = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

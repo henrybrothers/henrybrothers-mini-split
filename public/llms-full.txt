@@ -1,0 +1,83 @@
+# Henry Brothers
+
+> Henry Brothers is a ductless HVAC company serving Louisville, KY and Southern Indiana. We specialize in mini split installation, repair, and maintenance for residential properties.
+
+Henry Brothers was founded by brothers who believe in honest, neighborly service. We focus exclusively on ductless and mini split systems — it's all we do, and we do it well.
+
+- Phone: (812) 994-1008
+- Email: hello@thehenrybros.com
+- Hours: Mon-Fri 9am-6pm, Sat 9am-4pm
+- Service Areas: Louisville KY, Southern Indiana
+
+## Services
+
+### Mini Split Installation
+
+Expert installation of energy-efficient mini split systems for homes without existing ductwork. Most installations are completed in a single day with minimal disruption to your home.
+
+### Ductless System Repair
+
+Fast, reliable repairs for all brands and models of ductless and mini split systems.
+
+### Clean and Check℠
+
+Our exclusive maintenance service for peak efficiency year-round. Includes inspection of refrigerant levels, electrical connections, coil condition, and filter cleaning.
+
+### Financing
+
+Flexible financing options available to make comfort affordable.
+
+## HVAC Dictionary
+
+### BTU (British Thermal Unit)
+
+A BTU is just a way to measure heating and cooling power. The higher the BTU number, the more air a system can heat or cool. When someone says a mini split is 12,000 BTUs, that means it can comfortably handle a typical bedroom or garage. Getting the right BTU size for your space matters — too small and it runs constantly, too big and it cycles on and off without properly controlling humidity. A quick square-footage calculation usually points you in the right direction, but ceiling height, insulation, and how many windows you have all play a role too.
+
+### Ductless HVAC
+
+Ductless HVAC is exactly what it sounds like — a heating and cooling system that doesn't need ductwork. Instead of pushing air through a maze of metal ducts in your walls and ceiling, a mini split delivers conditioned air directly into the room from a wall-mounted air handler. This makes it a great fit for older homes that were never built with duct systems, finished basements, sunrooms, and garage workshops. No ducts also means no duct leaks — which is where traditional systems lose a surprising amount of energy.
+
+### Heat Pump
+
+A heat pump moves heat from one place to another instead of generating it from scratch. In the summer, it pulls heat out of your room and dumps it outside. In the winter, it does the reverse — pulling heat from the outdoor air (yes, even when it's cold) and moving it inside. Every mini split is a heat pump, which means one system handles both heating and cooling. Modern inverter compressors make them efficient enough to handle Southern Indiana winters without breaking a sweat.
+
+### Indoor Air Handler
+
+The indoor air handler is the unit mounted on your wall inside the room. It's the part of the mini split you actually see and feel — it blows conditioned air into the space and pulls room air back in to be cooled or heated. Most are slim, quiet, and come with a remote control. Each room gets its own air handler, which is what makes zone cooling possible. They connect to the outdoor unit through a small set of refrigerant lines that run through a small hole in the wall.
+
+### Inverter Compressor
+
+An inverter compressor adjusts its speed to match what your room actually needs, instead of just slamming on at full blast and shutting off over and over. Think of it like cruise control versus stomping the gas and brake. This means steadier temperatures, quieter operation, and lower energy bills. Most modern mini splits use inverter technology, which is a big part of why they score so well on SEER ratings. It's one of those things you don't think about, but you definitely notice the difference.
+
+### Mini Split
+
+A mini split is a compact heating and cooling system made up of two main parts: an outdoor condenser unit and one or more indoor air handlers. They're connected by refrigerant lines instead of ductwork, which is why they're also called ductless systems. Mini splits are popular for spaces where running ducts isn't practical — garages, sunrooms, additions, older homes, or any room that's always too hot or too cold. They give you room-by-room control and tend to be more energy-efficient than traditional forced-air systems.
+
+### Mini Split Installation
+
+Installing a mini split is usually a one-day job. It involves mounting the indoor air handler on the wall, placing the outdoor condenser on a pad or bracket outside, and running refrigerant lines between the two through a small hole in the wall — typically around three inches. There's no tearing open walls for ductwork, which keeps things clean and simple. Proper sizing matters — getting the right BTU capacity for your space means the system runs efficiently instead of working harder than it needs to.
+
+### Mini Split Maintenance
+
+Keeping a mini split running well doesn't take much, but it does take consistency. The basics include cleaning or replacing the filters in your indoor air handler every few weeks and keeping the outdoor unit clear of leaves, dirt, and debris. Beyond that, an annual professional tune-up — like a Clean and Check℠ — catches small issues before they turn into expensive repairs. Things like refrigerant levels, electrical connections, and coil condition all get looked at. A well-maintained mini split lasts longer and keeps your energy bills where they should be.
+
+### Outdoor Condenser Unit
+
+The outdoor condenser unit is the box that sits outside your home — it's the other half of your mini split system. It houses the compressor and a big coil that either releases heat (in cooling mode) or absorbs it (in heating mode). It connects to your indoor air handler through refrigerant lines. One outdoor unit can sometimes serve multiple indoor units, which is useful if you want to control several rooms. It needs decent airflow around it, so keeping bushes trimmed back and debris cleared is part of basic maintenance.
+
+### Refrigerant Line Set
+
+The refrigerant line set is the pair of copper tubes that connect your indoor air handler to the outdoor condenser unit. One line carries cold refrigerant to the indoor unit, and the other carries warm refrigerant back outside. They run through a small hole drilled through your exterior wall — usually around three inches — and are insulated to keep them working efficiently. The length and routing of the line set can vary depending on where you want the indoor and outdoor units placed. During installation, getting this part right matters for long-term performance.
+
+### SEER Rating
+
+SEER stands for Seasonal Energy Efficiency Ratio, and it tells you how efficiently a cooling system uses electricity over a typical cooling season. A higher number means lower energy bills. Most older window units or central air systems land around 10-14 SEER. Modern mini splits often hit 20 SEER or higher, especially ones with inverter compressors. It's not the only thing that matters when choosing a system, but it gives you a solid apples-to-apples comparison of operating costs. Think of it like MPG for your car — the higher the number, the further your dollar goes.
+
+### Zone Cooling
+
+Zone cooling means controlling the temperature in each room independently instead of heating or cooling your entire home to one setting. With mini splits, every indoor air handler has its own thermostat, so you can keep your bedroom cool at night without wasting energy on the living room nobody's using. It's especially useful in homes where some rooms run hot (like a sunroom or upstairs bedroom) while others stay comfortable. You only use energy where you need it, which is why zoned systems tend to be more efficient than traditional setups.
+
+## Optional
+
+- [Schedule Service](https://thehenrybros.com/schedule): Book an appointment online
+- [Contact](https://thehenrybros.com/#contact): Get in touch with Henry Brothers

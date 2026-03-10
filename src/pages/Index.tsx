@@ -9,13 +9,17 @@ import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Financing from "@/components/Financing";
-import JsonLdSchema from "@/components/JsonLdSchema";
-import { localBusinessSchema, organizationSchema, breadcrumbSchema, webSiteSchema, reviewsSchema } from "@/utils/schemaData";
+import {
+  LocalBusinessSchema,
+  OrganizationSchema,
+  WebSiteSchema,
+  ReviewSchema,
+  BreadcrumbSchema,
+} from "@/components/schema";
 import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -25,7 +29,7 @@ const Index = () => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 80, // Account for header height
+            top: targetElement.offsetTop - 80,
             behavior: 'smooth'
           });
         }
@@ -35,13 +39,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <JsonLdSchema schemaData={localBusinessSchema} />
-      <JsonLdSchema schemaData={organizationSchema} />
-      <JsonLdSchema schemaData={breadcrumbSchema} />
-      <JsonLdSchema schemaData={webSiteSchema} />
-      {reviewsSchema.map((review, index) => (
-        <JsonLdSchema key={index} schemaData={review} />
-      ))}
+      <LocalBusinessSchema />
+      <OrganizationSchema />
+      <WebSiteSchema />
+      <ReviewSchema />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://thehenrybros.com" },
+        { name: "Services", url: "https://thehenrybros.com#services" },
+        { name: "About", url: "https://thehenrybros.com#about" },
+        { name: "Contact", url: "https://thehenrybros.com#contact" },
+      ]} />
       
       <Header />
       <Hero />

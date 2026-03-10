@@ -1,22 +1,22 @@
-
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface JsonLdSchemaProps {
-  schemaData: any;
+  schemaData: Record<string, unknown>;
 }
 
 const JsonLdSchema = ({ schemaData }: JsonLdSchemaProps) => {
+  const scriptRef = useRef<HTMLScriptElement | null>(null);
+
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(schemaData);
     document.head.appendChild(script);
+    scriptRef.current = script;
 
     return () => {
-      // Clean up when component unmounts
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
+      if (scriptRef.current && scriptRef.current.parentNode) {
+        scriptRef.current.parentNode.removeChild(scriptRef.current);
       }
     };
   }, [schemaData]);

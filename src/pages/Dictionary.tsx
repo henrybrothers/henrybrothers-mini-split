@@ -4,17 +4,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DictionarySearch from "@/components/DictionarySearch";
 import DictionaryTermCard from "@/components/DictionaryTermCard";
-import JsonLdSchema from "@/components/JsonLdSchema";
+import {
+  BreadcrumbSchema,
+  DefinedTermSetSchema,
+  ItemListSchema,
+  WebPageSchema,
+} from "@/components/schema";
 import { dictionaryTerms, dictionaryCategories } from "@/data/dictionaryTerms";
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://thehenrybros.com" },
-    { "@type": "ListItem", position: 2, name: "Dictionary", item: "https://thehenrybros.com/dictionary" },
-  ],
-};
 
 const Dictionary = () => {
   const [search, setSearch] = useState("");
@@ -44,9 +40,25 @@ const Dictionary = () => {
     return terms.sort((a, b) => a.title.localeCompare(b.title));
   }, [search, activeCategory]);
 
+  const sortedTerms = [...dictionaryTerms].sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div className="min-h-screen flex flex-col bg-vintage-cream">
-      <JsonLdSchema schemaData={breadcrumbSchema} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://thehenrybros.com" },
+        { name: "Dictionary", url: "https://thehenrybros.com/dictionary" },
+      ]} />
+      <DefinedTermSetSchema terms={dictionaryTerms} />
+      <ItemListSchema items={sortedTerms.map((t) => ({
+        name: t.title,
+        url: `https://thehenrybros.com/dictionary/${t.slug}`,
+      }))} />
+      <WebPageSchema
+        name="HVAC Dictionary — Henry Brothers"
+        description="HVAC terms explained the way your neighbor would — no jargon, no fluff. A plain-spoken glossary from Henry Brothers."
+        url="https://thehenrybros.com/dictionary"
+      />
+
       <Header />
 
       <main className="flex-1 pt-28 pb-16">

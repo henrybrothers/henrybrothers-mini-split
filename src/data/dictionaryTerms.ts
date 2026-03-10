@@ -114,6 +114,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'Zone cooling means controlling the temperature in each room independently instead of heating or cooling your entire home to one setting. With <a href="/dictionary/mini-split">mini splits</a>, every <a href="/dictionary/indoor-air-handler">indoor air handler</a> has its own thermostat, so you can keep your bedroom cool at night without wasting energy on the living room nobody\'s using. It\'s especially useful in homes where some rooms run hot (like a sunroom or upstairs bedroom) while others stay comfortable. You only use energy where you need it, which is why zoned systems tend to be more efficient than traditional setups.',
     category: "Efficiency",
     relatedSlugs: ["mini-split", "indoor-air-handler", "btu", "seer-rating"],
+    datePublished: "2025-03-01",
   },
 ];
 

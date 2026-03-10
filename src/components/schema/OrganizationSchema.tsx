@@ -10,7 +10,7 @@ const data = {
   "image": "https://thehenrybros.com/lovable-uploads/b6171633-349a-4780-a66c-f52bea9b7b8e.png",
   "description": "Henry Brothers HVAC specializes in ductless and mini split heating & cooling solutions, serving Louisville, KY and Southern Indiana with expert installation, maintenance, and repair services.",
   "telephone": "+18129941008",
-  "email": "hello@thehenrybros.com",
+  "email": "team@thehenrybros.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Louisville",

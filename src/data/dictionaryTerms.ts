@@ -4,6 +4,7 @@ export interface DictionaryTerm {
   description: string;
   category: "Installation" | "Maintenance" | "Parts & Components" | "Efficiency";
   relatedSlugs: string[];
+  datePublished: string;
 }
 
 export const dictionaryTerms: DictionaryTerm[] = [

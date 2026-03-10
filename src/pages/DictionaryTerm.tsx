@@ -3,7 +3,12 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DictionaryTermCard from "@/components/DictionaryTermCard";
-import JsonLdSchema from "@/components/JsonLdSchema";
+import {
+  BreadcrumbSchema,
+  DefinedTermSchema,
+  FAQPageSchema,
+  WebPageSchema,
+} from "@/components/schema";
 import { getTermBySlug, getRelatedTerms } from "@/data/dictionaryTerms";
 
 const DictionaryTerm = () => {
@@ -24,33 +29,34 @@ const DictionaryTerm = () => {
   if (!term) return <Navigate to="/dictionary" replace />;
 
   const related = getRelatedTerms(term);
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://thehenrybros.com" },
-      { "@type": "ListItem", position: 2, name: "Dictionary", item: "https://thehenrybros.com/dictionary" },
-      { "@type": "ListItem", position: 3, name: term.title, item: `https://thehenrybros.com/dictionary/${term.slug}` },
-    ],
-  };
-
-  const definedTermSchema = {
-    "@context": "https://schema.org",
-    "@type": "DefinedTerm",
-    name: term.title,
-    description: term.description.replace(/<[^>]*>/g, ""),
-    inDefinedTermSet: {
-      "@type": "DefinedTermSet",
-      name: "Henry Brothers HVAC Dictionary",
-      url: "https://thehenrybros.com/dictionary",
-    },
-  };
+  const plainDescription = term.description.replace(/<[^>]*>/g, "");
+  const termUrl = `https://thehenrybros.com/dictionary/${term.slug}`;
 
   return (
     <div className="min-h-screen flex flex-col bg-vintage-cream">
-      <JsonLdSchema schemaData={breadcrumbSchema} />
-      <JsonLdSchema schemaData={definedTermSchema} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://thehenrybros.com" },
+        { name: "Dictionary", url: "https://thehenrybros.com/dictionary" },
+        { name: term.title, url: termUrl },
+      ]} />
+      <DefinedTermSchema
+        name={term.title}
+        description={plainDescription}
+        url={termUrl}
+        termCode={term.category}
+      />
+      <FAQPageSchema
+        question={`What is ${term.title.includes("(") ? term.title.split("(")[0].trim() : `a ${term.title}`}?`}
+        answer={plainDescription}
+      />
+      <WebPageSchema
+        type="ItemPage"
+        name={`${term.title} — HVAC Dictionary | Henry Brothers`}
+        description={plainDescription.length > 155 ? plainDescription.slice(0, 155).trimEnd() + "…" : plainDescription}
+        url={termUrl}
+        datePublished={term.datePublished}
+      />
+
       <Header />
 
       <main className="flex-1 pt-28 pb-16">

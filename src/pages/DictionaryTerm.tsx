@@ -27,6 +27,17 @@ const DictionaryTerm = () => {
 
   if (!term) return <Navigate to="/dictionary" replace />;
 
+  const handleDescriptionClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const href = target.getAttribute('href');
+      if (href && href.startsWith('/dictionary/')) {
+        e.preventDefault();
+        navigate(href);
+      }
+    }
+  }, [navigate]);
+
   const related = getRelatedTerms(term);
   const plainDescription = term.description.replace(/<[^>]*>/g, "");
   const termUrl = `https://thehenrybros.com/dictionary/${term.slug}`;

@@ -10,6 +10,7 @@ import {
 import { getTermBySlug, getRelatedTerms } from "@/data/dictionaryTerms";
 
 const DictionaryTerm = () => {
+  const navigate = useNavigate();
   const { slug } = useParams<{ slug: string }>();
   const term = slug ? getTermBySlug(slug) : undefined;
 

@@ -60,6 +60,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'A mini split is a compact heating and cooling system made up of two main parts: an <a href="/dictionary/outdoor-condenser-unit">outdoor condenser unit</a> and one or more <a href="/dictionary/indoor-air-handler">indoor air handlers</a>. They\'re connected by <a href="/dictionary/refrigerant-line-set">refrigerant lines</a> instead of ductwork, which is why they\'re also called <a href="/dictionary/ductless-hvac">ductless systems</a>. Mini splits are popular for spaces where running ducts isn\'t practical — garages, sunrooms, additions, older homes, or any room that\'s always too hot or too cold. They give you <a href="/dictionary/zone-cooling">room-by-room control</a> and tend to be more energy-efficient than traditional forced-air systems.',
     category: "Installation",
     relatedSlugs: ["ductless-hvac", "indoor-air-handler", "outdoor-condenser-unit", "mini-split-installation"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "mini-split-installation",

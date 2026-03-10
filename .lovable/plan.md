@@ -1,20 +1,65 @@
 
 
-## Replace Logo Across the Site
+# Implement llms.txt for Henry Brothers
 
-### What will change
+## What is llms.txt?
 
-1. **Copy the new logo** from the upload to `public/images/Website_Header_Logo.png` so it lives alongside the OG image in the public directory.
+A markdown file at `/llms.txt` that gives LLMs a concise, structured overview of your site — who you are, what you do, and links to detailed pages. Think of it like `robots.txt` but for AI assistants. The spec also recommends providing `.md` versions of pages.
 
-2. **Update Header logo** (`src/components/Header.tsx`) -- Change the `src` from `/lovable-uploads/henrybrothers-logo-bg.png` to `/images/Website_Header_Logo.png`.
+## Plan
 
-3. **Update Footer logo** (`src/components/Footer.tsx`) -- Change the `src` from `/lovable-uploads/118bbfa7-3faf-421e-8fa2-60cefa7888fd.png` to `/images/Website_Header_Logo.png`.
+### 1. Create `public/llms.txt`
 
-Both alt texts will remain "Henry Brothers Logo".
+Static markdown file following the spec format:
 
-### Files affected
+```markdown
+# Henry Brothers
 
-- `public/images/Website_Header_Logo.png` (new file -- copied from upload)
-- `src/components/Header.tsx` (one line change -- image src)
-- `src/components/Footer.tsx` (one line change -- image src)
+> Henry Brothers is a ductless HVAC company serving Louisville, KY and Southern Indiana. We specialize in mini split installation, repair, and maintenance for residential properties.
+
+Henry Brothers was founded by brothers who believe in honest, neighborly service. We focus exclusively on ductless and mini split systems — it's all we do, and we do it well.
+
+- Phone: (812) 994-1008
+- Email: hello@thehenrybros.com
+- Hours: Mon-Fri 9am-6pm, Sat 9am-4pm
+- Service Areas: Louisville KY, Southern Indiana
+
+## Services
+
+- [Mini Split Installation](https://thehenrybros.com/#services): Expert installation of energy-efficient mini split systems for homes without existing ductwork
+- [Ductless System Repair](https://thehenrybros.com/#services): Fast, reliable repairs for all brands and models
+- [Clean and Check℠](https://thehenrybros.com/#clean-check): Our exclusive maintenance service for peak efficiency year-round
+- [Financing](https://thehenrybros.com/#financing): Flexible financing options available
+
+## HVAC Dictionary
+
+- [Mini Split](https://thehenrybros.com/dictionary/mini-split): What a mini split is and how it works
+- [Ductless HVAC](https://thehenrybros.com/dictionary/ductless-hvac): Heating and cooling without ductwork
+- [Heat Pump](https://thehenrybros.com/dictionary/heat-pump): How heat pumps move heat instead of generating it
+- [SEER Rating](https://thehenrybros.com/dictionary/seer-rating): Understanding energy efficiency ratings
+- [BTU](https://thehenrybros.com/dictionary/btu): Measuring heating and cooling power
+- [Mini Split Installation](https://thehenrybros.com/dictionary/mini-split-installation): What the installation process involves
+- [Mini Split Maintenance](https://thehenrybros.com/dictionary/mini-split-maintenance): Keeping your system running well
+- [Indoor Air Handler](https://thehenrybros.com/dictionary/indoor-air-handler): The wall-mounted indoor unit
+- [Outdoor Condenser Unit](https://thehenrybros.com/dictionary/outdoor-condenser-unit): The outdoor half of the system
+- [Inverter Compressor](https://thehenrybros.com/dictionary/inverter-compressor): Variable-speed technology for efficiency
+- [Refrigerant Line Set](https://thehenrybros.com/dictionary/refrigerant-line-set): Copper tubes connecting indoor and outdoor units
+- [Zone Cooling](https://thehenrybros.com/dictionary/zone-cooling): Room-by-room temperature control
+
+## Optional
+
+- [Schedule Service](https://thehenrybros.com/schedule): Book an appointment online
+- [Contact](https://thehenrybros.com/#contact): Get in touch with Henry Brothers
+```
+
+### 2. Create `public/llms-full.txt`
+
+An expanded version that inlines the dictionary term descriptions directly, so an LLM can get all the content in one file without following links.
+
+### 3. Files to create
+
+- **`public/llms.txt`** — Core file per the spec
+- **`public/llms-full.txt`** — Expanded version with inlined dictionary content
+
+No code changes needed — these are static files served from `public/`.
 

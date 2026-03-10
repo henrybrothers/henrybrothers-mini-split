@@ -69,6 +69,7 @@ export const dictionaryTerms: DictionaryTerm[] = [
       'Installing a <a href="/dictionary/mini-split">mini split</a> is usually a one-day job. It involves mounting the <a href="/dictionary/indoor-air-handler">indoor air handler</a> on the wall, placing the <a href="/dictionary/outdoor-condenser-unit">outdoor condenser</a> on a pad or bracket outside, and running <a href="/dictionary/refrigerant-line-set">refrigerant lines</a> between the two through a small hole in the wall — typically around three inches. There\'s no tearing open walls for ductwork, which keeps things clean and simple. Proper sizing matters — getting the right <a href="/dictionary/btu">BTU capacity</a> for your space means the system runs efficiently instead of working harder than it needs to.',
     category: "Installation",
     relatedSlugs: ["mini-split", "indoor-air-handler", "outdoor-condenser-unit", "btu"],
+    datePublished: "2025-03-01",
   },
   {
     slug: "mini-split-maintenance",

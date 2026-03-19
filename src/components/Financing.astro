@@ -1,0 +1,31 @@
+---
+const benefits = ['Check your rate without affecting your credit score', 'Loans from $1,000 to $100,000', 'Terms from 12 to 144 months', 'Rates starting at 6.99% APR', 'Multiple lender offers to choose from', 'Quick and easy online application'];
+---
+
+<section id="financing" class="py-16 md:py-20 bg-vintage-cream">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="retro-badge text-sm mb-4">Affordable Comfort</span>
+      <h2 class="section-title mt-6">Financing Options</h2>
+      <p class="text-henry-navy/70 max-w-2xl mx-auto">We've partnered with Acorn Finance to make your mini split installation affordable. Pre-qualify in minutes with no impact to your credit score.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+      <div>
+        <h3 class="font-heading font-bold text-lg mb-4">Benefits of Financing</h3>
+        <ul class="space-y-3">
+          {benefits.map((benefit) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-henry-yellow flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>{benefit}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-6"><a href="https://www.acornfinance.com/partner/henry-brothers/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block">Check Your Rate</a></div>
+      </div>
+      <div class="text-center">
+        <img src="/lovable-uploads/14841db1-8a70-4c8b-896f-12adc6cf1927.png" alt="Scan to check your financing rate with Acorn Finance" width="200" height="200" loading="lazy" class="mx-auto mb-4" />
+        <p class="text-sm text-henry-navy/60">Scan the QR code to check your rate on mobile</p>
+      </div>
+    </div>
+  </div>
+</section>

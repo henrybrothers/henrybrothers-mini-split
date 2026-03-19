@@ -1,0 +1,60 @@
+---
+import { site } from '@/data/site';
+---
+
+<section class="relative bg-henry-navy text-vintage-cream py-16 md:py-24 vintage-texture distressed overflow-hidden">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 vintage-text-shadow">
+          Southern Indiana and Louisville's <span class="text-henry-yellow">Ductless HVAC</span> Experts
+        </h1>
+        <p class="text-lg text-vintage-cream/90 mb-8 max-w-xl">
+          Henry Brothers installs, maintains, and repairs ductless mini split systems for homes across
+          Charlestown, Jeffersonville, New Albany, and the greater Louisville metro.
+          Family-owned. Locally trusted.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="/#services" class="btn-primary">Learn About Our Services</a>
+          <a href="/#financing" class="border-2 border-henry-yellow text-henry-yellow font-bold py-3 px-6 hover:bg-henry-yellow hover:text-henry-navy transition-all">Financing Options</a>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-henry-yellow" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/></svg>
+            <strong>5-Star Service</strong>
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-henry-yellow" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+            <strong>Family Owned</strong>
+          </span>
+        </div>
+      </div>
+
+      <div class="bg-vintage-cream text-henry-navy p-6 md:p-8 border-4 border-henry-yellow" style="box-shadow: 8px 8px 0 rgba(12,35,64,0.7);">
+        <h2 class="font-heading font-bold text-2xl mb-2">Schedule Your Service</h2>
+        <p class="text-henry-navy/70 mb-6">Expert ductless HVAC solutions for your home</p>
+        <form action="/api/contact" method="POST" class="space-y-4">
+          <div>
+            <label for="hero-name" class="block text-sm font-medium mb-1">Name</label>
+            <input type="text" id="hero-name" name="name" required class="w-full border-2 border-henry-navy/20 p-3 focus:border-henry-navy focus:outline-none" />
+          </div>
+          <div>
+            <label for="hero-phone" class="block text-sm font-medium mb-1">Phone</label>
+            <input type="tel" id="hero-phone" name="phone" required class="w-full border-2 border-henry-navy/20 p-3 focus:border-henry-navy focus:outline-none" />
+          </div>
+          <div>
+            <label for="hero-service" class="block text-sm font-medium mb-1">Service Needed</label>
+            <select id="hero-service" name="service" class="w-full border-2 border-henry-navy/20 p-3 focus:border-henry-navy focus:outline-none bg-white">
+              <option value="">Select a service…</option>
+              <option value="installation">Mini Split Installation</option>
+              <option value="repair">Ductless System Repair</option>
+              <option value="clean-and-check">Clean and Check℠</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary w-full text-center">Get a Free Quote</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

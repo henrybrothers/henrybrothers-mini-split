@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+---
+
+<BaseLayout
+  title={`Page Not Found | ${site.name}`}
+  description="The page you're looking for doesn't exist. Return to the Henry Brothers HVAC homepage or browse our service areas."
+  noindex={true}
+>
+  <section class="py-24 md:py-32 bg-white text-center">
+    <div class="container mx-auto px-4 max-w-xl">
+      <span class="retro-badge text-sm mb-4">404</span>
+      <h1 class="font-heading font-extrabold text-5xl md:text-6xl text-henry-navy mt-6 mb-4">Lost?</h1>
+      <p class="text-henry-navy/70 mb-8">
+        This page doesn't exist. Let's get you back to somewhere useful.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/" class="btn-primary">Back to Home</a>
+        <a href="/service-areas" class="border-2 border-henry-navy text-henry-navy font-bold py-3 px-6 hover:bg-henry-navy hover:text-vintage-cream transition-all">Service Areas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

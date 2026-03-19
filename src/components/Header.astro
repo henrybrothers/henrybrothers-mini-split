@@ -1,0 +1,68 @@
+---
+import { site } from '@/data/site';
+
+const navLinks = [
+  { label: 'Services', href: '/#services' },
+  { label: 'About', href: '/#about' },
+  { label: 'Service Areas', href: '/service-areas' },
+  { label: 'Clean and Check℠', href: '/#clean-check' },
+  { label: 'Dictionary', href: '/dictionary' },
+  { label: 'Contact', href: '/#contact' },
+];
+---
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-henry-navy/95 backdrop-blur-sm">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="/" class="flex-shrink-0">
+        <img
+          src="/images/Website_Header_Logo.png"
+          alt={`${site.name} — Charlestown, Indiana`}
+          width="126"
+          height="75"
+          class="h-12 md:h-16 w-auto"
+        />
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+        {navLinks.map((link) => (
+          <a href={link.href} class="text-vintage-cream hover:text-henry-yellow transition-colors text-sm font-medium">
+            {link.label}
+          </a>
+        ))}
+        <a href="/schedule" class="btn-primary text-sm !py-2 !px-4">Schedule Now</a>
+      </nav>
+
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden text-vintage-cream p-2"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden hidden pb-4" aria-label="Mobile navigation">
+      {navLinks.map((link) => (
+        <a href={link.href} class="block py-2 text-vintage-cream hover:text-henry-yellow transition-colors text-sm font-medium">
+          {link.label}
+        </a>
+      ))}
+      <a href="/schedule" class="btn-primary inline-block mt-3 text-sm !py-2 !px-4">Schedule Now</a>
+    </nav>
+  </div>
+</header>
+
+<div class="h-16 md:h-20"></div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+</script>

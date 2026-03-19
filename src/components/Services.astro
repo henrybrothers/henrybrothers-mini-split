@@ -1,0 +1,47 @@
+---
+const services = [
+  { title: 'Mini Split Installation', description: 'Professional installation of ductless mini split systems for any room in your home. We handle everything from sizing to final testing.', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
+  { title: 'Ductless System Repair', description: 'Fast, reliable repair service for all ductless and mini split systems. We diagnose and fix issues to get your comfort back on track.', icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z M15 12a3 3 0 11-6 0 3 3 0 016 0z' },
+  { title: 'Clean and Check℠', description: 'Our signature maintenance service keeps your system running efficiently. Includes a thorough inspection, cleaning, and performance check.', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
+];
+
+const benefits = [
+  'No ductwork required — perfect for older homes and additions',
+  'Room-by-room temperature control for maximum comfort',
+  'Energy-efficient — lower utility bills compared to traditional HVAC',
+  'Quiet operation — modern inverter technology',
+  'Year-round heating and cooling from one system',
+];
+---
+
+<section id="services" class="py-16 md:py-20 bg-vintage-cream">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="retro-badge text-sm mb-4">What We Do</span>
+      <h2 class="section-title mt-6">Our Services</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      {services.map((service) => (
+        <div class="service-card">
+          <div class="icon-wrapper w-12 h-12 rounded-full bg-henry-navy text-henry-yellow flex items-center justify-center mb-4 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon} /></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl mb-3">{service.title}</h3>
+          <p class="text-henry-navy/70">{service.description}</p>
+        </div>
+      ))}
+    </div>
+    <div class="vintage-card max-w-3xl mx-auto">
+      <h3 class="font-heading font-bold text-xl mb-4">Why Choose Ductless Systems?</h3>
+      <ul class="space-y-3">
+        {benefits.map((benefit) => (
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-henry-yellow flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            <span>{benefit}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-6"><a href="/#contact" class="btn-primary inline-block">Get a Free Consultation</a></div>
+    </div>
+  </div>
+</section>

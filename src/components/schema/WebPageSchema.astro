@@ -1,0 +1,9 @@
+---
+import { site } from '@/data/site';
+interface Props { name: string; description: string; url: string; datePublished?: string; dateModified?: string; type?: 'WebPage' | 'ItemPage'; }
+const { name, description, url, datePublished, dateModified, type = 'WebPage' } = Astro.props;
+const data: Record<string, unknown> = { "@context": "https://schema.org", "@type": type, "name": name, "description": description, "url": url, "isPartOf": { "@id": `${site.url}#website` } };
+if (datePublished) data["datePublished"] = datePublished;
+if (dateModified) data["dateModified"] = dateModified;
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

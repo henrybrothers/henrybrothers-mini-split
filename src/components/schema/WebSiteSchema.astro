@@ -1,0 +1,15 @@
+---
+import { site } from '@/data/site';
+
+const data = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${site.url}#website`,
+  "url": site.url,
+  "name": site.name,
+  "description": `Expert ductless and mini split HVAC solutions by Justin & Nick Henry. Serving Charlestown, IN and the Louisville metro area.`,
+  "publisher": { "@id": `${site.url}#organization` },
+  "potentialAction": { "@type": "SearchAction", "target": `${site.url}?q={search_term_string}`, "query-input": "required name=search_term_string" },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

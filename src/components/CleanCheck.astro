@@ -1,0 +1,48 @@
+---
+const included = ['Full system inspection', 'Coil cleaning (indoor and outdoor)', 'Filter check and replacement recommendation', 'Refrigerant level check', 'Electrical connection inspection', 'Thermostat calibration', 'Performance and efficiency test'];
+const benefits = [
+  { title: 'Extended System Life', description: 'Regular maintenance helps your mini split last years longer.' },
+  { title: 'Energy Savings', description: 'A clean, tuned system runs more efficiently — lowering your bills.' },
+  { title: 'Prevent Costly Repairs', description: 'Catching small issues early saves you from expensive breakdowns.' },
+];
+---
+
+<section id="clean-check" class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="retro-badge text-sm mb-4">Maintenance</span>
+      <h2 class="section-title mt-6">Clean and Check℠</h2>
+      <p class="text-henry-navy/70 max-w-2xl mx-auto">Our signature maintenance service keeps your ductless system running at peak performance. One visit, total peace of mind.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <div class="vintage-card mb-6 text-center">
+          <span class="text-4xl font-heading font-extrabold text-henry-navy">$199</span>
+          <p class="text-henry-navy/70 text-sm">with a new smart thermostat</p>
+          <p class="text-henry-navy/70 text-sm mt-1">or <strong>$99</strong> for existing customers</p>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-3">What's Included:</h3>
+        <ul class="space-y-2 mb-6">
+          {included.map((item) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-henry-yellow flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <a href="/schedule" class="btn-primary inline-block">Schedule Your Clean and Check</a>
+      </div>
+      <div>
+        <h3 class="font-heading font-bold text-lg mb-4">Why Regular Maintenance Matters</h3>
+        <div class="space-y-4">
+          {benefits.map((benefit) => (
+            <div class="vintage-card">
+              <h4 class="font-bold mb-1">{benefit.title}</h4>
+              <p class="text-henry-navy/70 text-sm">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

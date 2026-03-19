@@ -1,0 +1,14 @@
+---
+import { site } from '@/data/site';
+---
+
+<section class="py-16 md:py-20 bg-henry-navy text-vintage-cream text-center distressed">
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="font-heading font-extrabold text-3xl md:text-4xl mb-4 vintage-text-shadow">Ready for Expert Ductless HVAC Service?</h2>
+    <p class="text-vintage-cream/80 max-w-xl mx-auto mb-8">Serving Charlestown, Indiana and communities within {site.serviceRadius}. Get a free quote or schedule your service today.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/#contact" class="btn-primary">Get a Free Quote</a>
+      <a href={`tel:${site.phoneTel}`} class="border-2 border-henry-yellow text-henry-yellow font-bold py-3 px-6 hover:bg-henry-yellow hover:text-henry-navy transition-all">Call {site.phone}</a>
+    </div>
+  </div>
+</section>

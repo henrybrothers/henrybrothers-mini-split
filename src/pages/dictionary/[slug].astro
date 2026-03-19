@@ -1,0 +1,94 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema.astro';
+import WebPageSchema from '@/components/schema/WebPageSchema.astro';
+import DefinedTermSchema from '@/components/schema/DefinedTermSchema.astro';
+import FAQPageSchema from '@/components/schema/FAQPageSchema.astro';
+import { dictionaryTerms, getRelatedTerms, stripHtml } from '@/data/dictionaryTerms';
+import { site } from '@/data/site';
+
+export function getStaticPaths() {
+  return dictionaryTerms.map((term) => ({
+    params: { slug: term.slug },
+    props: { term },
+  }));
+}
+
+const { term } = Astro.props;
+const relatedTerms = getRelatedTerms(term);
+
+const pageUrl = `${site.url}/dictionary/${term.slug}`;
+const plainDesc = stripHtml(term.description);
+const metaDesc = plainDesc.length > 155 ? plainDesc.slice(0, 152) + '…' : plainDesc;
+
+const breadcrumbs = [
+  { name: 'Home', url: site.url },
+  { name: 'HVAC Dictionary', url: `${site.url}/dictionary` },
+  { name: term.title, url: pageUrl },
+];
+
+const faqs = [
+  {
+    question: `What is a ${term.title}?`,
+    answer: plainDesc,
+  },
+  {
+    question: `Do I need to understand ${term.title} before getting a mini split?`,
+    answer: `Knowing the basics helps you have a more informed conversation with your installer, but you don't need to be an expert. The Henry Brothers team will walk you through everything during your free quote.`,
+  },
+];
+---
+
+<BaseLayout
+  title={`${term.title} | HVAC Dictionary | ${site.name}`}
+  description={metaDesc}
+  canonicalUrl={pageUrl}
+>
+  <Fragment slot="head">
+    <BreadcrumbSchema items={breadcrumbs} />
+    <WebPageSchema name={`${term.title} — HVAC Dictionary`} description={metaDesc} url={pageUrl} />
+    <DefinedTermSchema term={term} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <Breadcrumbs items={breadcrumbs} />
+
+      <div class="mt-6 mb-4">
+        <span class="retro-badge text-sm">{term.category}</span>
+      </div>
+      <h1 class="font-heading font-extrabold text-3xl md:text-4xl text-henry-navy mb-6">{term.title}</h1>
+
+      <div class="prose prose-lg max-w-none text-henry-navy/80 mb-10" set:html={term.description} />
+
+      {relatedTerms.length > 0 && (
+        <div class="border-t-2 border-henry-navy/10 pt-8">
+          <h2 class="font-heading font-bold text-lg mb-4">Related Terms</h2>
+          <ul class="flex flex-wrap gap-3">
+            {relatedTerms.map((related) => (
+              <li>
+                <a
+                  href={`/dictionary/${related.slug}`}
+                  class="inline-block border-2 border-henry-navy/20 px-4 py-2 text-sm font-medium text-henry-navy hover:border-henry-yellow hover:text-henry-yellow transition-colors"
+                >
+                  {related.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div class="mt-10 bg-henry-navy text-vintage-cream p-6 md:p-8" style="box-shadow: 5px 5px 0 rgba(12,35,64,0.4);">
+        <h2 class="font-heading font-bold text-xl mb-2">Questions about your mini split?</h2>
+        <p class="text-vintage-cream/80 mb-4">We install and service ductless systems throughout Charlestown, IN and the surrounding area. Get a free quote today.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#contact" class="btn-primary">Get a Free Quote</a>
+          <a href={`tel:${site.phoneTel}`} class="border-2 border-henry-yellow text-henry-yellow font-bold py-3 px-6 hover:bg-henry-yellow hover:text-henry-navy transition-all">Call {site.phone}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

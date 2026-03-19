@@ -1,0 +1,37 @@
+---
+import { site } from '@/data/site';
+import { serviceAreas } from '@/data/serviceAreas';
+
+const indiana = serviceAreas.filter((a) => a.stateAbbr === 'IN');
+const kentucky = serviceAreas.filter((a) => a.stateAbbr === 'KY');
+---
+
+<section id="areas" class="py-16 md:py-20 bg-vintage-cream">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="retro-badge text-sm mb-4">Where We Work</span>
+      <h2 class="section-title mt-6">Service Areas</h2>
+      <p class="text-henry-navy/70 max-w-2xl mx-auto">We serve homeowners within an {site.serviceRadius} radius of Charlestown, Indiana — including communities across Clark County, Floyd County, and the Louisville metro.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="font-heading font-bold text-lg mb-3">Indiana</h3>
+        <ul class="space-y-2 mb-6">
+          {indiana.map((area) => (
+            <li><a href={`/service-areas/${area.slug}`} class="text-henry-navy hover:text-henry-yellow transition-colors underline decoration-henry-yellow/40 hover:decoration-henry-yellow">{area.city}, {area.stateAbbr}</a></li>
+          ))}
+        </ul>
+        <h3 class="font-heading font-bold text-lg mb-3">Kentucky</h3>
+        <ul class="space-y-2">
+          {kentucky.map((area) => (
+            <li><a href={`/service-areas/${area.slug}`} class="text-henry-navy hover:text-henry-yellow transition-colors underline decoration-henry-yellow/40 hover:decoration-henry-yellow">{area.city}, {area.stateAbbr}</a></li>
+          ))}
+        </ul>
+        <p class="mt-6 text-sm text-henry-navy/70">Not sure if we serve your area? <a href={`tel:${site.phoneTel}`} class="text-henry-navy font-bold hover:text-henry-yellow transition-colors">Call us at {site.phone}</a></p>
+      </div>
+      <div>
+        <iframe title="Henry Brothers HVAC service area map centered on Charlestown, Indiana" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d-85.6717!3d38.4531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88690e9c7f6b29d3%3A0x17e8dc2a6b20dbd3!2sCharlestown%2C%20IN!5e0!3m2!1sen!2sus!4v1" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="vintage-border w-full"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+import { site } from '@/data/site';
+
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${site.url}#organization`,
+  "name": site.name,
+  "url": site.url,
+  "logo": `${site.url}/images/og-image.png`,
+  "description": `${site.name} specializes in ductless and mini split heating & cooling solutions, serving Charlestown, IN and the Louisville metro area.`,
+  "telephone": site.phoneTel,
+  "email": site.email,
+  "address": { "@type": "PostalAddress", "addressLocality": site.address.city, "addressRegion": site.address.state, "addressCountry": site.address.country },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "3", "bestRating": "5", "worstRating": "1" },
+  "sameAs": [site.social.facebook],
+  "founder": site.founders.map((f) => ({ "@type": "Person", "name": f.name })),
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

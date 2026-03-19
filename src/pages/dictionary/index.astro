@@ -1,0 +1,75 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema.astro';
+import WebPageSchema from '@/components/schema/WebPageSchema.astro';
+import DefinedTermSetSchema from '@/components/schema/DefinedTermSetSchema.astro';
+import ItemListSchema from '@/components/schema/ItemListSchema.astro';
+import { dictionaryTerms, dictionaryCategories } from '@/data/dictionaryTerms';
+import { site } from '@/data/site';
+
+const pageUrl = `${site.url}/dictionary`;
+const breadcrumbs = [
+  { name: 'Home', url: site.url },
+  { name: 'HVAC Dictionary', url: pageUrl },
+];
+
+const termsByCategory = dictionaryCategories.map((cat) => ({
+  category: cat,
+  terms: dictionaryTerms.filter((t) => t.category === cat),
+}));
+
+const listItems = dictionaryTerms.map((t) => ({
+  name: t.title,
+  url: `${site.url}/dictionary/${t.slug}`,
+  description: t.description.replace(/<[^>]*>/g, '').slice(0, 150),
+}));
+---
+
+<BaseLayout
+  title={`HVAC Dictionary | Mini Split Terms Explained | ${site.name}`}
+  description="Plain-English definitions for mini split and ductless HVAC terms. From BTU to SEER ratings, learn what it all means before your installation."
+  canonicalUrl={pageUrl}
+>
+  <Fragment slot="head">
+    <BreadcrumbSchema items={breadcrumbs} />
+    <WebPageSchema
+      name="HVAC Dictionary — Mini Split Terms Explained"
+      description="Plain-English definitions for mini split and ductless HVAC terms."
+      url={pageUrl}
+    />
+    <DefinedTermSetSchema terms={dictionaryTerms} />
+    <ItemListSchema items={listItems} />
+  </Fragment>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class="text-center mb-12 mt-6">
+        <span class="retro-badge text-sm mb-4">Reference</span>
+        <h1 class="section-title mt-6">HVAC Dictionary</h1>
+        <p class="text-henry-navy/70 max-w-2xl mx-auto">
+          Plain-English explanations of the terms you'll hear during a mini split installation or service call.
+          No jargon, no fluff — just the information you need.
+        </p>
+      </div>
+
+      {termsByCategory.map(({ category, terms }) => (
+        <div class="mb-12">
+          <h2 class="font-heading font-bold text-xl mb-6 border-b-2 border-henry-navy/10 pb-2">{category}</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {terms.map((term) => (
+              <a
+                href={`/dictionary/${term.slug}`}
+                class="vintage-card hover:border-henry-yellow hover:shadow-lg transition-all group"
+              >
+                <h3 class="font-bold text-henry-navy group-hover:text-henry-yellow transition-colors mb-1">{term.title}</h3>
+                <p class="text-sm text-henry-navy/60 line-clamp-2">{term.description.replace(/<[^>]*>/g, '')}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

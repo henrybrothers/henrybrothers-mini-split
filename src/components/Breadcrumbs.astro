@@ -1,0 +1,28 @@
+---
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  light?: boolean;
+}
+
+const { items, light = false } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="text-sm">
+  <ol class={`flex flex-wrap items-center gap-1 ${light ? 'text-vintage-cream/60' : 'text-henry-navy/50'}`}>
+    {items.map((item, i) => (
+      <li class="flex items-center gap-1">
+        {i > 0 && <span class="mx-1" aria-hidden="true">›</span>}
+        {i < items.length - 1 ? (
+          <a href={item.url} class={`hover:underline transition-colors ${light ? 'hover:text-vintage-cream' : 'hover:text-henry-navy'}`}>{item.name}</a>
+        ) : (
+          <span class={light ? 'text-vintage-cream/80' : 'text-henry-navy/80'} aria-current="page">{item.name}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

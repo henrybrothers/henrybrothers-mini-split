@@ -1,0 +1,8 @@
+---
+import { site } from '@/data/site';
+interface Props { name: string; description: string; url: string; termCode?: string; }
+const { name, description, url, termCode } = Astro.props;
+const data: Record<string, unknown> = { "@context": "https://schema.org", "@type": "DefinedTerm", "name": name, "description": description, "url": url, "inDefinedTermSet": { "@type": "DefinedTermSet", "name": "Henry Brothers HVAC Dictionary", "url": `${site.url}/dictionary` } };
+if (termCode) data["termCode"] = termCode;
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

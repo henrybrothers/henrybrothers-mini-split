@@ -1,6 +1,6 @@
 /** Central site configuration — edit here, every page updates. */
 export const site = {
-  name: 'Henry Brothers HVAC',
+  name: 'Henry Brothers Heat \u2022 Cool \u2022 Mini Splits',
   shortName: 'Henry Brothers',
   url: 'https://thehenrybros.com',
   phone: '(812) 994-1008',
@@ -14,8 +14,8 @@ export const site = {
     country: 'US',
   },
   geo: {
-    latitude: 38.4531,
-    longitude: -85.6717,
+    latitude: 38.4537,
+    longitude: -85.6705,
   },
   hours: {
     weekday: '9:00 AM - 6:00 PM',

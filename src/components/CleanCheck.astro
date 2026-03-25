@@ -1,4 +1,12 @@
 ---
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const pricing = await reader.singletons.membershipPricing.read();
+const cleanCheckBase = pricing?.cleanAndCheckBasePrice ?? 99;
+const cleanCheckFull = pricing?.cleanAndCheckPrice ?? 199;
+
 const included = ['Full system inspection', 'Coil cleaning (indoor and outdoor)', 'Filter check and replacement recommendation', 'Refrigerant level check', 'Electrical connection inspection', 'Thermostat calibration', 'Performance and efficiency test'];
 const benefits = [
   { title: 'Extended System Life', description: 'Regular maintenance helps your mini split last years longer.' },
@@ -17,9 +25,9 @@ const benefits = [
     <div class="grid md:grid-cols-2 gap-8 items-start">
       <div>
         <div class="vintage-card mb-6 text-center">
-          <span class="text-4xl font-heading font-extrabold text-henry-navy">$199</span>
+          <span class="text-4xl font-heading font-extrabold text-henry-navy">${cleanCheckFull}</span>
           <p class="text-henry-navy/70 text-sm">with a new smart thermostat</p>
-          <p class="text-henry-navy/70 text-sm mt-1">or <strong>$99</strong> for existing customers</p>
+          <p class="text-henry-navy/70 text-sm mt-1">or <strong>${cleanCheckBase}</strong> for existing customers</p>
         </div>
         <h3 class="font-heading font-bold text-lg mb-3">What's Included:</h3>
         <ul class="space-y-2 mb-6">

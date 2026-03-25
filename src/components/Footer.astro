@@ -4,8 +4,16 @@ import keystaticConfig from '../../keystatic.config';
 import { site } from '@/data/site';
 
 const reader = createReader(process.cwd(), keystaticConfig);
-const siteSettings = await reader.singletons.siteSettings.read();
+const [siteSettings, nap] = await Promise.all([
+  reader.singletons.siteSettings.read(),
+  reader.singletons.businessInfo.read(),
+]);
 const footerTagline = siteSettings?.footerTagline ?? 'Ductless HVAC experts serving Clark County and Floyd County, Indiana.';
+const showMembership = siteSettings?.showMembershipLink ?? true;
+const phoneDisplay = nap?.phone ?? site.phone;
+const phoneE164 = '+1' + phoneDisplay.replace(/\D/g, '');
+const monSatHours = nap?.mondaySaturday ?? site.hours.weekday;
+const sunHours = nap?.sunday ?? site.hours.sunday;
 
 const currentYear = new Date().getFullYear();
 
@@ -14,6 +22,7 @@ const quickLinks = [
   { label: 'About', href: '/#about' },
   { label: 'Service Areas', href: '/service-areas' },
   { label: 'Clean and Check℠', href: '/#clean-check' },
+  ...(showMembership ? [{ label: 'Membership', href: '/membership' }] : []),
   { label: 'Financing', href: '/#financing' },
   { label: 'Contact', href: '/#contact' },
   { label: 'Dictionary', href: '/dictionary' },
@@ -46,9 +55,9 @@ const quickLinks = [
       <div>
         <h3 class="font-heading font-bold text-lg mb-4">Contact</h3>
         <div class="space-y-3 text-sm">
-          <a href={`tel:${site.phoneTel}`} class="flex items-center gap-2 text-vintage-cream/80 hover:text-henry-yellow transition-colors">
+          <a href={`tel:${phoneE164}`} class="flex items-center gap-2 text-vintage-cream/80 hover:text-henry-yellow transition-colors">
             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            {site.phone}
+            {phoneDisplay}
           </a>
           <a href={`mailto:${site.email}`} class="flex items-center gap-2 text-vintage-cream/80 hover:text-henry-yellow transition-colors">
             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -56,9 +65,8 @@ const quickLinks = [
           </a>
           <p class="text-vintage-cream/80">
             <strong class="text-vintage-cream">Hours:</strong><br/>
-            Mon–Fri: {site.hours.weekday}<br/>
-            Sat: {site.hours.saturday}<br/>
-            Sun: {site.hours.sunday}
+            Mon–Sat: {monSatHours}<br/>
+            Sun: {sunHours}
           </p>
         </div>
       </div>

@@ -4,12 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
-import cloudflare from '@astrojs/cloudflare';
-
 export default defineConfig({
   site: 'https://thehenrybros.com',
-  output: 'hybrid',
-  adapter: cloudflare(),
   integrations: [
     react({ include: ['**/keystatic/**'] }),
     markdoc(),

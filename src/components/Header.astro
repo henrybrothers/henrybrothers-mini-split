@@ -1,11 +1,18 @@
 ---
 import { site } from '@/data/site';
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const siteSettings = await reader.singletons.siteSettings.read();
+const showMembership = siteSettings?.showMembershipLink ?? true;
 
 const navLinks = [
   { label: 'Services', href: '/#services' },
   { label: 'About', href: '/#about' },
   { label: 'Service Areas', href: '/service-areas' },
   { label: 'Clean and Check℠', href: '/#clean-check' },
+  ...(showMembership ? [{ label: 'Membership', href: '/membership' }] : []),
   { label: 'Dictionary', href: '/dictionary' },
   { label: 'Contact', href: '/#contact' },
 ];

@@ -6,6 +6,12 @@ import WebPageSchema from '@/components/schema/WebPageSchema.astro';
 import LocalBusinessSchema from '@/components/schema/LocalBusinessSchema.astro';
 import { serviceAreas } from '@/data/serviceAreas';
 import { site } from '@/data/site';
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../../keystatic.config';
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const pricing = await reader.singletons.membershipPricing.read();
+const cleanCheckBase = pricing?.cleanAndCheckBasePrice ?? 99;
 
 export function getStaticPaths() {
   return serviceAreas.map((area) => ({
@@ -18,7 +24,7 @@ const { area } = Astro.props;
 
 const pageUrl = `${site.url}/service-areas/${area.slug}`;
 const metaTitle = `Mini Split Installation in ${area.city}, ${area.stateAbbr} | ${site.name}`;
-const metaDesc = `Henry Brothers HVAC installs and services ductless mini splits in ${area.city}, ${area.state}. Expert local technicians. Free quotes. Financing available.`;
+const metaDesc = `${site.name} installs and services ductless mini splits in ${area.city}, ${area.state}. Expert local technicians. Free quotes. Financing available.`;
 
 const breadcrumbs = [
   { name: 'Home', url: site.url },
@@ -73,8 +79,8 @@ const nearbyAreas = serviceAreas
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {[
           { title: 'Mini Split Installation', desc: 'New single-zone or multi-zone ductless systems. We handle sizing, mounting, line sets, and startup.' },
-          { title: 'Heating & Cooling Repair', desc: 'Fast, honest diagnosis and repair for any brand of ductless mini split.' },
-          { title: 'Clean and Check℠', desc: 'Our $99 maintenance visit — coil cleaning, filter check, refrigerant inspection, and full system test.' },
+          { title: 'Heating & Cooling Repair', desc: 'Fast diagnosis. Straight answers. No runaround. We repair any brand of ductless mini split.' },
+          { title: 'Clean and Check℠', desc: `Our $${cleanCheckBase} maintenance visit — coil cleaning, filter check, refrigerant inspection, and full system test.` },
           { title: 'Free Quotes', desc: 'We walk your space, measure the rooms, and give you a detailed written quote at no charge.' },
           { title: 'Financing Available', desc: 'Partner with Acorn Finance for rates starting at 6.99% APR. Check your rate in minutes.' },
           { title: 'Smart Thermostat Setup', desc: 'Upgrade to smart controls for remote access, scheduling, and better efficiency.' },

@@ -25,7 +25,7 @@ export const serviceAreas: ServiceArea[] = [
     stateAbbr: 'IN',
     slug: 'jeffersonville-indiana',
     county: 'Clark County',
-    description: 'Jeffersonville homeowners trust Henry Brothers for reliable ductless mini split installation and repair. Whether you live near the riverfront, in the historic downtown, or out toward the newer developments, we deliver expert HVAC solutions tailored to your space.',
+    description: 'Jeffersonville homeowners call Henry Brothers for ductless mini split installation and repair. Whether you live near the riverfront, in the historic downtown, or out toward the newer developments, we show up, do the work right, and leave your space cleaner than we found it.',
     geo: { latitude: 38.2776, longitude: -85.7372 },
   },
   {

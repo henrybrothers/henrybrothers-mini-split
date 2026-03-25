@@ -22,14 +22,14 @@ const listItems = serviceAreas.map((a) => ({
 
 <BaseLayout
   title={`Mini Split Service Areas | ${site.name} | Clark & Floyd County, Indiana`}
-  description={`Henry Brothers HVAC serves homeowners within ${site.serviceRadius} of Charlestown, IN — including ${serviceAreas.map((a) => a.city).join(', ')} across Clark County and Floyd County, Indiana.`}
+  description={`${site.name} serves homeowners within ${site.serviceRadius} of Charlestown, IN — including ${serviceAreas.map((a) => a.city).join(', ')} across Clark County and Floyd County, Indiana.`}
   canonicalUrl={pageUrl}
 >
   <Fragment slot="head">
     <BreadcrumbSchema items={breadcrumbs} />
     <WebPageSchema
       name="Mini Split Service Areas — Clark & Floyd County, Indiana"
-      description={`Henry Brothers HVAC serves homeowners within ${site.serviceRadius} of Charlestown, IN across Clark County and Floyd County, Indiana.`}
+      description={`${site.name} serves homeowners within ${site.serviceRadius} of Charlestown, IN across Clark County and Floyd County, Indiana.`}
       url={pageUrl}
     />
     <ItemListSchema items={listItems} />

@@ -3,6 +3,8 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import '@/styles/global.css';
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
 
 interface Props {
   title?: string;
@@ -14,10 +16,21 @@ interface Props {
 }
 
 const props = Astro.props;
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const siteSettings = await reader.singletons.siteSettings.read();
+const fontChoice = siteSettings?.fontChoice ?? 'montserrat';
+
+const fontFamilyMap: Record<string, string> = {
+  'montserrat': '"Montserrat Variable", system-ui, sans-serif',
+  'source-serif-4': '"Source Serif 4 Variable", Georgia, serif',
+  'libre-baskerville': '"Libre Baskerville", Georgia, serif',
+};
+const headingFont = fontFamilyMap[fontChoice] ?? fontFamilyMap['montserrat'];
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style={`--font-heading: ${headingFont};`}>
   <head>
     <BaseHead {...props} />
     <slot name="head" />

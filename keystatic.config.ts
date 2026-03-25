@@ -49,6 +49,16 @@ export default config({
           description: 'Toggle the /membership link across the site without touching code.',
           defaultValue: true,
         }),
+        fontChoice: fields.select({
+          label: 'Heading Font',
+          description: 'Font used for section titles, headings, and the navigation. Body text always uses Inter.',
+          options: [
+            { label: 'Montserrat (default — bold, modern sans-serif)', value: 'montserrat' },
+            { label: 'Source Serif 4 (elegant variable serif)', value: 'source-serif-4' },
+            { label: 'Libre Baskerville (classic book serif)', value: 'libre-baskerville' },
+          ],
+          defaultValue: 'montserrat',
+        }),
       },
     }),
 

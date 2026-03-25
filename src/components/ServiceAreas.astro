@@ -33,3 +33,18 @@ const indiana = serviceAreas.filter((a) => a.stateAbbr === 'IN');
     </div>
   </div>
 </section>
+
+<script>
+  const facade = document.getElementById('map-facade');
+  const iframe = document.getElementById('map-iframe') as HTMLIFrameElement | null;
+  function loadMap() {
+    if (!iframe || !facade) return;
+    iframe.src = iframe.dataset.src ?? '';
+    iframe.style.display = 'block';
+    facade.remove();
+  }
+  facade?.addEventListener('click', loadMap);
+  facade?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') loadMap();
+  });
+</script>

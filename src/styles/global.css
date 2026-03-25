@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/montserrat";
 
 /* ── Theme tokens (Tailwind v4 CSS-first config) ── */
 @theme {

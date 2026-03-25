@@ -3,7 +3,6 @@ import { site } from '@/data/site';
 import { serviceAreas } from '@/data/serviceAreas';
 
 const indiana = serviceAreas.filter((a) => a.stateAbbr === 'IN');
-const kentucky = serviceAreas.filter((a) => a.stateAbbr === 'KY');
 ---
 
 <section id="areas" class="py-16 md:py-20 bg-vintage-cream">
@@ -11,19 +10,13 @@ const kentucky = serviceAreas.filter((a) => a.stateAbbr === 'KY');
     <div class="text-center mb-12">
       <span class="retro-badge text-sm mb-4">Where We Work</span>
       <h2 class="section-title mt-6">Service Areas</h2>
-      <p class="text-henry-navy/70 max-w-2xl mx-auto">We serve homeowners within an {site.serviceRadius} radius of Charlestown, Indiana — including communities across Clark County, Floyd County, and the Louisville metro.</p>
+      <p class="text-henry-navy/70 max-w-2xl mx-auto">We serve homeowners within an {site.serviceRadius} radius of Charlestown, Indiana — including communities across Clark County and Floyd County.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-8 items-start">
       <div>
         <h3 class="font-heading font-bold text-lg mb-3">Indiana</h3>
         <ul class="space-y-2 mb-6">
           {indiana.map((area) => (
-            <li><a href={`/service-areas/${area.slug}`} class="text-henry-navy hover:text-henry-yellow transition-colors underline decoration-henry-yellow/40 hover:decoration-henry-yellow">{area.city}, {area.stateAbbr}</a></li>
-          ))}
-        </ul>
-        <h3 class="font-heading font-bold text-lg mb-3">Kentucky</h3>
-        <ul class="space-y-2">
-          {kentucky.map((area) => (
             <li><a href={`/service-areas/${area.slug}`} class="text-henry-navy hover:text-henry-yellow transition-colors underline decoration-henry-yellow/40 hover:decoration-henry-yellow">{area.city}, {area.stateAbbr}</a></li>
           ))}
         </ul>

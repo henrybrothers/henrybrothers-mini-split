@@ -1,5 +1,19 @@
 ---
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
 import { site } from '@/data/site';
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const homepage = await reader.singletons.homepage.read();
+
+const heroHeading = homepage?.heroHeading ?? "Southern Indiana's Ductless HVAC Experts";
+const heroSubhead = homepage?.heroSubhead ?? "Henry Brothers installs, maintains, and repairs ductless mini split systems for homes across Charlestown, Jeffersonville, New Albany, and Southern Indiana.";
+
+// Split heading to wrap "Ductless HVAC" in yellow — find the phrase if present
+const ductlessPhrase = 'Ductless HVAC';
+const headingParts = heroHeading.includes(ductlessPhrase)
+  ? heroHeading.split(ductlessPhrase)
+  : null;
 ---
 
 <section class="relative bg-henry-navy text-vintage-cream py-16 md:py-24 vintage-texture distressed overflow-hidden">
@@ -7,12 +21,12 @@ import { site } from '@/data/site';
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 vintage-text-shadow">
-          Southern Indiana and Louisville's <span class="text-henry-yellow">Ductless HVAC</span> Experts
+          {headingParts
+            ? <>{headingParts[0]}<span class="text-henry-yellow">Ductless HVAC</span>{headingParts[1]}</>
+            : heroHeading}
         </h1>
         <p class="text-lg text-vintage-cream/90 mb-8 max-w-xl">
-          Henry Brothers installs, maintains, and repairs ductless mini split systems for homes across
-          Charlestown, Jeffersonville, New Albany, and the greater Louisville metro.
-          Family-owned. Locally trusted.
+          {heroSubhead}
         </p>
         <div class="flex flex-wrap gap-4 mb-8">
           <a href="/#services" class="btn-primary">Learn About Our Services</a>
@@ -24,8 +38,8 @@ import { site } from '@/data/site';
             <strong>5-Star Service</strong>
           </span>
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-henry-yellow" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
-            <strong>Family Owned</strong>
+            <svg class="w-5 h-5 text-henry-yellow" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <strong>Clark &amp; Floyd County, IN</strong>
           </span>
         </div>
       </div>

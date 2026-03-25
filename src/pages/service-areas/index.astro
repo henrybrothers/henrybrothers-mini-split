@@ -13,9 +13,6 @@ const breadcrumbs = [
   { name: 'Service Areas', url: pageUrl },
 ];
 
-const indiana = serviceAreas.filter((a) => a.stateAbbr === 'IN');
-const kentucky = serviceAreas.filter((a) => a.stateAbbr === 'KY');
-
 const listItems = serviceAreas.map((a) => ({
   name: `${a.city}, ${a.state}`,
   url: `${site.url}/service-areas/${a.slug}`,
@@ -24,15 +21,15 @@ const listItems = serviceAreas.map((a) => ({
 ---
 
 <BaseLayout
-  title={`Mini Split Service Areas | ${site.name} | Southern Indiana & Louisville`}
-  description={`Henry Brothers HVAC serves homeowners within ${site.serviceRadius} of Charlestown, IN — including ${indiana.map((a) => a.city).join(', ')}, and communities across the Louisville metro.`}
+  title={`Mini Split Service Areas | ${site.name} | Clark & Floyd County, Indiana`}
+  description={`Henry Brothers HVAC serves homeowners within ${site.serviceRadius} of Charlestown, IN — including ${serviceAreas.map((a) => a.city).join(', ')} across Clark County and Floyd County, Indiana.`}
   canonicalUrl={pageUrl}
 >
   <Fragment slot="head">
     <BreadcrumbSchema items={breadcrumbs} />
     <WebPageSchema
-      name="Mini Split Service Areas — Southern Indiana & Louisville Metro"
-      description={`Henry Brothers HVAC serves homeowners within ${site.serviceRadius} of Charlestown, IN.`}
+      name="Mini Split Service Areas — Clark & Floyd County, Indiana"
+      description={`Henry Brothers HVAC serves homeowners within ${site.serviceRadius} of Charlestown, IN across Clark County and Floyd County, Indiana.`}
       url={pageUrl}
     />
     <ItemListSchema items={listItems} />
@@ -46,49 +43,28 @@ const listItems = serviceAreas.map((a) => ({
         <h1 class="section-title mt-6">Service Areas</h1>
         <p class="text-henry-navy/70 max-w-2xl mx-auto">
           We serve homeowners within {site.serviceRadius} of Charlestown, Indiana — covering communities
-          across Clark County, Floyd County, and the Louisville metro.
+          across Clark County and Floyd County.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-        <div>
-          <h2 class="font-heading font-bold text-xl mb-6">Indiana</h2>
-          <ul class="space-y-3">
-            {indiana.map((area) => (
-              <li>
-                <a
-                  href={`/service-areas/${area.slug}`}
-                  class="flex items-center justify-between vintage-card hover:border-henry-yellow group transition-all"
-                >
-                  <div>
-                    <span class="font-bold text-henry-navy group-hover:text-henry-yellow transition-colors">{area.city}</span>
-                    <span class="text-henry-navy/50 text-sm ml-2">{area.county}</span>
-                  </div>
-                  <svg class="w-4 h-4 text-henry-navy/30 group-hover:text-henry-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 class="font-heading font-bold text-xl mb-6">Kentucky</h2>
-          <ul class="space-y-3">
-            {kentucky.map((area) => (
-              <li>
-                <a
-                  href={`/service-areas/${area.slug}`}
-                  class="flex items-center justify-between vintage-card hover:border-henry-yellow group transition-all"
-                >
-                  <div>
-                    <span class="font-bold text-henry-navy group-hover:text-henry-yellow transition-colors">{area.city}</span>
-                    <span class="text-henry-navy/50 text-sm ml-2">{area.county}</span>
-                  </div>
-                  <svg class="w-4 h-4 text-henry-navy/30 group-hover:text-henry-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div class="max-w-2xl mx-auto">
+        <h2 class="font-heading font-bold text-xl mb-6">Indiana</h2>
+        <ul class="space-y-3">
+          {serviceAreas.map((area) => (
+            <li>
+              <a
+                href={`/service-areas/${area.slug}`}
+                class="flex items-center justify-between vintage-card hover:border-henry-yellow group transition-all"
+              >
+                <div>
+                  <span class="font-bold text-henry-navy group-hover:text-henry-yellow transition-colors">{area.city}</span>
+                  <span class="text-henry-navy/50 text-sm ml-2">{area.county}</span>
+                </div>
+                <svg class="w-4 h-4 text-henry-navy/30 group-hover:text-henry-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div class="text-center mt-12">

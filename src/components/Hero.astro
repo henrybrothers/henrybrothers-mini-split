@@ -47,27 +47,21 @@ const headingParts = heroHeading.includes(ductlessPhrase)
       <div class="bg-vintage-cream text-henry-navy p-6 md:p-8 border-4 border-henry-yellow" style="box-shadow: 8px 8px 0 rgba(12,35,64,0.7);">
         <h2 class="font-heading font-bold text-2xl mb-2">Schedule Your Service</h2>
         <p class="text-henry-navy/70 mb-6">Expert ductless HVAC solutions for your home</p>
-        <form action="/api/contact" method="POST" class="space-y-4">
-          <div>
-            <label for="hero-name" class="block text-sm font-medium mb-1">Name</label>
-            <input type="text" id="hero-name" name="name" required class="w-full border-2 border-henry-navy/20 p-3 focus:border-henry-navy focus:outline-none" />
-          </div>
-          <div>
-            <label for="hero-phone" class="block text-sm font-medium mb-1">Phone</label>
-            <input type="tel" id="hero-phone" name="phone" required class="w-full border-2 border-henry-navy/20 p-3 focus:border-henry-navy focus:outline-none" />
-          </div>
-          <div>
-            <label for="hero-service" class="block text-sm font-medium mb-1">Service Needed</label>
-            <select id="hero-service" name="service" class="w-full border-2 border-henry-navy/20 p-3 focus:border-henry-navy focus:outline-none bg-white">
-              <option value="">Select a service…</option>
-              <option value="installation">Mini Split Installation</option>
-              <option value="repair">Ductless System Repair</option>
-              <option value="clean-and-check">Clean and Check℠</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-primary w-full text-center">Get a Free Quote</button>
-        </form>
+        <!-- TODO: Tally form ID (woQ0AV) may be changing — update when new form is ready -->
+        <iframe
+          data-tally-src="https://tally.so/embed/woQ0AV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="500"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Schedule Service with Henry Brothers"
+          style="border: none; min-height: 300px;"
+        ></iframe>
+        <script>
+          var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+        </script>
       </div>
     </div>
   </div>
